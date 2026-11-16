@@ -1,0 +1,145 @@
+name: Inspect DarkRPCity OBJ ranges
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/inspect-obj-ranges.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Download city source
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 \
+            "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" \
+            -o source.zip
+
+      - name: Inspect OBJ group and material ranges
+        run: |
+          python3 - <<'PY'
+          import zipfile,json,collections,os,re
+
+          z=zipfile.ZipFile("source.zip")
+          names=z.namelist()
+
+          def load(base):
+              p=[n for n in names if n.split("/")[-1]==base]
+              return json.loads(z.read(p[0])) if p else None
+
+          manifest=load("DarkRPCity_UNITY_MANIFEST.json")
+          if not manifest:
+              raise SystemExit("Manifest absent")
+
+          mesh_files={x["mesh_id"]:x["fichier"] for x in manifest["fichiers_mesh"]}
+          objects=manifest["objets"]
+          report={"mesh_files":{},"object_samples":[],"totals":{}}
+
+          bymesh=collections.defaultdict(list)
+          for o in objects:
+              bymesh[o.get("mesh_id")].append(o)
+
+          for mid,filename in sorted(mesh_files.items()):
+              matches=[n for n in names if n.endswith("/"+filename)]
+              if not matches:
+                  matches=[n for n in names if n.split("/")[-1]==filename]
+              if not matches:
+                  report["mesh_files"][str(mid)]={"missing":filename}
+                  continue
+
+              path=matches[0]
+              groups=[]
+              current=None
+              faces=0
+              vertices=0
+              normals=0
+              uvs=0
+              materials=[]
+              with z.open(path) as f:
+                  for raw in f:
+                      line=raw.decode("utf-8","ignore").strip()
+                      if line.startswith(("o ","g ")):
+                          if current is not None:
+                              current["faces_end"]=faces
+                              groups.append(current)
+                          current={"name":line[2:],"faces_start":faces,
+                                   "materials":[]}
+                      elif line.startswith("usemtl "):
+                          mat=line[7:]
+                          if mat not in materials: materials.append(mat)
+                          if current is not None and mat not in current["materials"]:
+                              current["materials"].append(mat)
+                      elif line.startswith("f "):
+                          faces+=1
+                      elif line.startswith("v "):
+                          vertices+=1
+                      elif line.startswith("vn "):
+                          normals+=1
+                      elif line.startswith("vt "):
+                          uvs+=1
+              if current is not None:
+                  current["faces_end"]=faces
+                  groups.append(current)
+
+              linked=[]
+              valid=0
+              for o in bymesh.get(mid,[]):
+                  r=o.get("plage_mesh") or {}
+                  start=r.get("debut")
+                  count=r.get("nombre")
+                  end=start+count if isinstance(start,int) and isinstance(count,int) else None
+                  ok=end is not None and end<=len(groups)
+                  valid+=int(ok)
+                  linked.append({
+                      "gameobject_id":o.get("gameobject_id"),
+                      "name":o.get("nom"),
+                      "range_start":start,
+                      "range_count":count,
+                      "range_end":end,
+                      "range_inside_group_count":ok,
+                      "groups":groups[start:end] if ok else []
+                  })
+
+              report["mesh_files"][str(mid)]={
+                  "path":path,
+                  "bytes":z.getinfo(path).file_size,
+                  "vertices":vertices,
+                  "normals":normals,
+                  "uvs":uvs,
+                  "faces":faces,
+                  "o_g_group_count":len(groups),
+                  "material_names":materials[:100],
+                  "linked_objects":len(linked),
+                  "ranges_within_group_count":valid,
+                  "range_samples":linked[:12],
+                  "group_samples":groups[:12]
+              }
+
+          report["totals"]={
+              "manifest_objects":len(objects),
+              "mesh_ids":len(mesh_files),
+              "objects_by_mesh":{str(k):len(v) for k,v in bymesh.items()},
+              "obj_groups":sum(x.get("o_g_group_count",0) for x in report["mesh_files"].values())
+          }
+
+          with open("DARKRPCITY_OBJ_RANGE_REPORT.json","w") as f:
+              json.dump(report,f,ensure_ascii=False,indent=2)
+
+          print(json.dumps(report["totals"],ensure_ascii=False,indent=2))
+          for k,v in report["mesh_files"].items():
+              print(k, v.get("path"), "groups=",v.get("o_g_group_count"),
+                    "objects=",v.get("linked_objects"),
+                    "valid_ranges=",v.get("ranges_within_group_count"))
+          PY
+
+      - name: Upload OBJ range report
+        uses: actions/upload-artifact@v4
+        with:
+          name: DarkRPCity-OBJ-range-report
+          path: DARKRPCITY_OBJ_RANGE_REPORT.json
+          retention-days: 14
