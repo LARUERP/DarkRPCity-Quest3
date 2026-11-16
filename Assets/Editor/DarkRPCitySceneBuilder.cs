@@ -127,7 +127,7 @@ public class DarkRPCitySceneBuilder
             Vector3 forward = new Vector3(mat[0,2], mat[1,2], mat[2,2]);
 
             Vector3 scale = new Vector3(right.magnitude, up.magnitude, forward.magnitude);
-            if (Vector3.Cross(right, up).Dot(forward) < 0) scale.x = -scale.x;
+            if (Vector3.Dot(Vector3.Cross(right, up), forward) < 0) scale.x = -scale.x;
 
             holder.transform.localPosition = pos;
             holder.transform.localRotation = Quaternion.LookRotation(forward.normalized, up.normalized);
