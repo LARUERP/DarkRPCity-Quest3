@@ -1,0 +1,87 @@
+name: Inspect DarkRPCity source
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/inspect-city-source.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Download source archive
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 --retry-delay 3 \
+            "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" \
+            -o DarkRPCity_RECONSTRUCTION.zip
+          ls -lh DarkRPCity_RECONSTRUCTION.zip
+          sha256sum DarkRPCity_RECONSTRUCTION.zip > SOURCE_SHA256.txt
+
+      - name: Inspect archive
+        run: |
+          python3 - <<'PY'
+          import json, zipfile, os
+          from pathlib import PurePosixPath
+
+          report = {"archive_bytes": os.path.getsize("DarkRPCity_RECONSTRUCTION.zip"),
+                    "files": {}, "json": {}, "warnings": []}
+          with zipfile.ZipFile("DarkRPCity_RECONSTRUCTION.zip") as z:
+              infos = [i for i in z.infolist() if not i.is_dir()]
+              for ext in (".obj", ".mtl", ".png", ".jpg", ".jpeg", ".tga", ".json"):
+                  matches = [i for i in infos if i.filename.lower().endswith(ext)]
+                  report["files"][ext] = {
+                      "count": len(matches),
+                      "bytes": sum(i.file_size for i in matches)
+                  }
+              report["largest_obj"] = [
+                  {"path": i.filename, "bytes": i.file_size}
+                  for i in sorted(
+                      (x for x in infos if x.filename.lower().endswith(".obj")),
+                      key=lambda x: x.file_size, reverse=True
+                  )[:12]
+              ]
+              for name in (
+                  "DarkRPCity_UNITY_MANIFEST.json",
+                  "DarkRPCity_STRUCTURE_RECONSTRUITE.json",
+                  "DarkRPCity_SCENE_BUILD_PLAN.json"
+              ):
+                  matches = [i for i in infos if PurePosixPath(i.filename).name == name]
+                  if not matches:
+                      report["warnings"].append("Missing " + name)
+                      continue
+                  try:
+                      data = json.loads(z.read(matches[0]))
+                      item = {
+                          "archive_path": matches[0].filename,
+                          "type": type(data).__name__,
+                          "keys": list(data.keys())[:80] if isinstance(data, dict) else [],
+                          "count": len(data) if hasattr(data, "__len__") else None
+                      }
+                      if isinstance(data, dict):
+                          item["arrays"] = {
+                              k: {"count": len(v), "first_item": v[0] if v else None}
+                              for k, v in data.items() if isinstance(v, list)
+                          }
+                      report["json"][name] = item
+                  except Exception as e:
+                      report["warnings"].append(name + ": " + str(e))
+
+          with open("DARKRPCITY_SOURCE_REPORT.json", "w") as f:
+              json.dump(report, f, indent=2, ensure_ascii=False)
+          print(json.dumps(report, indent=2, ensure_ascii=False)[:30000])
+          PY
+
+      - name: Upload inspection report
+        uses: actions/upload-artifact@v4
+        with:
+          name: DarkRPCity-source-inspection
+          path: |
+            DARKRPCITY_SOURCE_REPORT.json
+            SOURCE_SHA256.txt
+          retention-days: 14
