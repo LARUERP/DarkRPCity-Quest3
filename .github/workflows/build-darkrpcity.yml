@@ -1,0 +1,87 @@
+name: Build DarkRPCity Quest 3
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "Assets/Editor/DarkRPCitySceneBuilder.cs"
+      - ".github/workflows/build-darkrpcity.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download and prepare city source
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 \
+            "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" \
+            -o source.zip
+          mkdir -p DarkRPCity_Staging
+          python3 - <<'PY'
+          import zipfile,json,os,shutil
+          z=zipfile.ZipFile("source.zip")
+          names=z.namelist()
+          def find(base):
+              a=[n for n in names if n.rsplit("/",1)[-1]==base]
+              if not a: raise SystemExit("Absent: "+base)
+              return a[0]
+          manifest=json.loads(z.read(find("DarkRPCity_UNITY_MANIFEST.json")))
+          meshids=sorted(set(o["mesh_id"] for o in manifest["objets"]))
+          meshfiles=[x for x in manifest["fichiers_mesh"] if x["mesh_id"] in meshids]
+          out={"fichiers_mesh":meshfiles,"objets":[]}
+          for o in manifest["objets"]:
+              matrix=o.get("matrice_monde")
+              if not matrix or len(matrix)!=4:
+                  continue
+              out["objets"].append({
+                  "gameobject_id":o["gameobject_id"],
+                  "nom":o.get("nom","Objet"),
+                  "mesh_id":o["mesh_id"],
+                  "matrix":[float(v) for row in matrix for v in row]
+              })
+          with open("DarkRPCity_Staging/DarkRPCity_RUNTIME_MANIFEST.json","w") as f:
+              json.dump(out,f,ensure_ascii=False,separators=(",",":"))
+          wanted={x["fichier"] for x in meshfiles}
+          for n in names:
+              base=n.rsplit("/",1)[-1]
+              ext=os.path.splitext(base)[1].lower()
+              if base in wanted or ext in (".mtl",".png",".jpg",".jpeg"):
+                  target=os.path.join("DarkRPCity_Staging",base)
+                  if not os.path.exists(target):
+                      with z.open(n) as src,open(target,"wb") as dst:
+                          shutil.copyfileobj(src,dst,1024*1024)
+          print("OBJ requis:",len(wanted))
+          print("Objets manifest:",len(out["objets"]))
+          PY
+
+      - name: Build Unity Android scene and AssetBundle
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: .
+          unityVersion: 2021.3.16f1
+          targetPlatform: Android
+          buildMethod: DarkRPCitySceneBuilder.BuildFromCI
+          allowDirtyBuild: true
+
+      - name: Upload generated city
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: DarkRPCity-Quest3-Build
+          path: |
+            Assets/DarkRPCity_Generated/
+            Assets/DarkRPCity_Build/
+            Assets/DarkRPCity_Source/
+          retention-days: 14
