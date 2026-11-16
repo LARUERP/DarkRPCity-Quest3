@@ -1,0 +1,61 @@
+name: Audit reconstruction archive
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Download archive
+        run: |
+          curl -fL --retry 3 \
+          "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" \
+          -o DarkRPCity_RECONSTRUCTION.zip
+          ls -lh DarkRPCity_RECONSTRUCTION.zip
+          sha256sum DarkRPCity_RECONSTRUCTION.zip > SHA256SUMS.txt
+
+      - name: Inspect archive
+        run: |
+          python3 - <<'PY'
+          import json, zipfile
+          from pathlib import PurePosixPath
+
+          report = {"entries": 0, "obj_files": 0, "json_files": 0,
+                    "textures": 0, "errors": []}
+          with zipfile.ZipFile("DarkRPCity_RECONSTRUCTION.zip") as z:
+              names = [i.filename for i in z.infolist() if not i.is_dir()]
+              report["entries"] = len(names)
+              report["obj_files"] = sum(n.lower().endswith(".obj") for n in names)
+              report["json_files"] = sum(n.lower().endswith(".json") for n in names)
+              report["textures"] = sum(n.lower().endswith((".png",".jpg",".jpeg",".tga")) for n in names)
+
+              for expected in ["DarkRPCity_UNITY_MANIFEST.json",
+                               "DarkRPCity_STRUCTURE_RECONSTRUITE.json"]:
+                  matches = [n for n in names if PurePosixPath(n).name == expected]
+                  if not matches:
+                      report["errors"].append("Absent: " + expected)
+                  else:
+                      try:
+                          json.loads(z.read(matches[0]))
+                      except Exception as e:
+                          report["errors"].append("JSON invalide: " + str(e))
+
+          with open("AUDIT_DARKRPCITY.json", "w") as f:
+              json.dump(report, f, indent=2)
+          print(json.dumps(report, indent=2))
+          if report["errors"]:
+              raise SystemExit(1)
+          PY
+
+      - name: Save audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: DarkRPCity-archive-audit
+          path: |
+            AUDIT_DARKRPCITY.json
+            SHA256SUMS.txt
