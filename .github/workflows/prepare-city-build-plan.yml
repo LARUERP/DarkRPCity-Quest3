@@ -1,0 +1,163 @@
+name: Prepare DarkRPCity build plan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/prepare-city-build-plan.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Download city source
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 \
+            "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" \
+            -o source.zip
+
+      - name: Resolve scene relationships
+        run: |
+          python3 - <<'PY'
+          import zipfile,json,re,collections,os
+          z=zipfile.ZipFile("source.zip")
+          names=z.namelist()
+
+          def load(base):
+              found=[n for n in names if n.split("/")[-1]==base]
+              if not found: return None
+              return json.loads(z.read(found[0]))
+
+          manifest=load("DarkRPCity_UNITY_MANIFEST.json")
+          hierarchy=load("DarkRPCity_STRUCTURE_RECONSTRUITE.json")
+          associations=load("DarkRPCity_ASSOCIATIONS.json")
+          lods=load("DarkRPCity_LOD_ASSOCIATIONS.json")
+
+          if not all(x is not None for x in [manifest,hierarchy,associations,lods]):
+              raise SystemExit("Fichier essentiel absent de l'archive")
+
+          hids={x.get("id") for x in hierarchy}
+          hids.discard(None)
+          object_ids={x.get("gameobject_id") for x in manifest["objets"]}
+          object_ids.discard(None)
+          transform_ids={x.get("transform_id") for x in manifest["objets"]}
+          transform_ids.discard(None)
+
+          parent_values=[x.get("parent_id") for x in manifest["objets"] if x.get("parent_id") is not None]
+          parent_matches={
+              "hierarchy_id":sum(p in hids for p in parent_values),
+              "gameobject_id":sum(p in object_ids for p in parent_values),
+              "transform_id":sum(p in transform_ids for p in parent_values)
+          }
+
+          obj_files=[]
+          for n in names:
+              if n.lower().endswith(".obj"):
+                  m=re.search(r"(?:^|/)GO_(\d+)_",n)
+                  obj_files.append({
+                      "path":n,
+                      "bytes":z.getinfo(n).file_size,
+                      "gameobject_id":int(m.group(1)) if m else None
+                  })
+
+          global_objs=[x for x in obj_files if "EXPORT_GLOBAL" in x["path"]]
+          global_ids={x["gameobject_id"] for x in global_objs if x["gameobject_id"] is not None}
+          object_matches=sum(x.get("gameobject_id") in global_ids for x in manifest["objets"])
+
+          lod_by_id=collections.defaultdict(list)
+          for group in lods:
+              for level in group.get("niveaux",[]):
+                  for item in level.get("objets",[]):
+                      lod_by_id[item.get("gameobject_id")].append({
+                          "lodgroup_id":group.get("lodgroup_id"),
+                          "level":level.get("index"),
+                          "screen_height":level.get("hauteur_ecran")
+                      })
+
+          records=[]
+          sectors=collections.Counter()
+          bounds=[float("inf"),float("inf"),float("inf"),float("-inf"),float("-inf"),float("-inf")]
+          for o in manifest["objets"]:
+              matrix=o.get("matrice_monde")
+              pos=[matrix[0][3],matrix[1][3],matrix[2][3]] if matrix else None
+              if pos:
+                  x,y,zz=pos
+                  bounds=[min(bounds[0],x),min(bounds[1],y),min(bounds[2],zz),
+                          max(bounds[3],x),max(bounds[4],y),max(bounds[5],zz)]
+                  sector=(int(x//128),int(zz//128))
+                  sectors[sector]+=1
+              gid=o.get("gameobject_id")
+              matches=[f for f in global_objs if f["gameobject_id"]==gid]
+              records.append({
+                  "gameobject_id":gid,
+                  "name":o.get("nom"),
+                  "parent_id":o.get("parent_id"),
+                  "transform_id":o.get("transform_id"),
+                  "mesh_id":o.get("mesh_id"),
+                  "world_position":pos,
+                  "world_matrix":matrix,
+                  "materials":o.get("materiaux",[]),
+                  "global_obj":matches[0]["path"] if matches else None,
+                  "lod":lod_by_id.get(gid,[])
+              })
+
+          plan={
+              "format":"DarkRPCitySceneBuildPlan",
+              "version":1,
+              "source_archive_bytes":os.path.getsize("source.zip"),
+              "counts":{
+                  "hierarchy":len(hierarchy),
+                  "objects":len(records),
+                  "associations":len(associations),
+                  "lod_groups":len(lods),
+                  "global_obj_files":len(global_objs),
+                  "all_obj_files":len(obj_files),
+                  "objects_with_global_obj":object_matches
+              },
+              "parent_resolution_candidates":parent_matches,
+              "world_bounds_xyz":bounds,
+              "sector_size":128,
+              "sector_object_counts":[
+                  {"sector_x":k[0],"sector_z":k[1],"objects":v}
+                  for k,v in sorted(sectors.items())
+              ],
+              "global_obj_files":global_objs,
+              "objects":records
+          }
+
+          with open("DARKRPCITY_SCENE_BUILD_PLAN.json","w") as f:
+              json.dump(plan,f,ensure_ascii=False,separators=(",",":"))
+
+          audit={
+              "counts":plan["counts"],
+              "parent_resolution_candidates":parent_matches,
+              "world_bounds_xyz":bounds,
+              "sectors":len(sectors),
+              "largest_sectors":sorted(plan["sector_object_counts"],key=lambda x:x["objects"],reverse=True)[:20],
+              "sample_objects":records[:15],
+              "unmatched_global_obj_samples":[
+                  x for x in records if not x["global_obj"]
+              ][:30],
+              "warnings":[
+                  "Parent identifiers must be validated before hierarchy reconstruction",
+                  "OBJ imports must be optimized before Quest 3 deployment"
+              ]
+          }
+          with open("DARKRPCITY_BUILD_AUDIT.json","w") as f:
+              json.dump(audit,f,ensure_ascii=False,indent=2)
+          print(json.dumps(audit,ensure_ascii=False,indent=2)[:30000])
+          PY
+
+      - name: Upload build plan and audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: DarkRPCity-build-plan
+          path: |
+            DARKRPCITY_SCENE_BUILD_PLAN.json
+            DARKRPCITY_BUILD_AUDIT.json
+          retention-days: 14
