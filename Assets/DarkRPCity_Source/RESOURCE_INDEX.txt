@@ -1,0 +1,6 @@
+DARKRPCITY RESOURCE INDEX
+Unity: 2021.3.16f1
+OBJ models: 30
+Materials: 188
+LOD groups: 2851
+Textures folder: DarkRPCity_TEXTURES_PNG

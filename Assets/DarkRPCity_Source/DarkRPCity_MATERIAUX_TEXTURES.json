@@ -1,0 +1,4754 @@
+[
+  {
+    "material_id": 3,
+    "nom": "matelas",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 270,
+        "nom_texture": "tissu_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 220,
+        "nom_texture": "tissu_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 388,
+        "nom_texture": "tissu_M"
+      }
+    ]
+  },
+  {
+    "material_id": 4,
+    "nom": "carrelage_gres",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 298,
+        "nom_texture": "carrelage_gres_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 245,
+        "nom_texture": "carrelage_gres_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 309,
+        "nom_texture": "carrelage_gres_M"
+      }
+    ]
+  },
+  {
+    "material_id": 5,
+    "nom": "metal_noir",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 6,
+    "nom": "laiton",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 271,
+        "nom_texture": "chrome_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 368,
+        "nom_texture": "chrome_M"
+      }
+    ]
+  },
+  {
+    "material_id": 7,
+    "nom": "soubassement",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 374,
+        "nom_texture": "beton_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 421,
+        "nom_texture": "beton_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 261,
+        "nom_texture": "beton_M"
+      }
+    ]
+  },
+  {
+    "material_id": 8,
+    "nom": "beton_lisse",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 374,
+        "nom_texture": "beton_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 421,
+        "nom_texture": "beton_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 261,
+        "nom_texture": "beton_M"
+      }
+    ]
+  },
+  {
+    "material_id": 9,
+    "nom": "dalles_plafond",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 248,
+        "nom_texture": "dalles_plafond_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 342,
+        "nom_texture": "dalles_plafond_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 358,
+        "nom_texture": "dalles_plafond_M"
+      }
+    ]
+  },
+  {
+    "material_id": 10,
+    "nom": "peint_gris",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 407,
+        "nom_texture": "peinture_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 387,
+        "nom_texture": "peinture_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 235,
+        "nom_texture": "peinture_M"
+      }
+    ]
+  },
+  {
+    "material_id": 11,
+    "nom": "papier_motif_rose",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 276,
+        "nom_texture": "papier_motif_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 362,
+        "nom_texture": "papier_motif_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 338,
+        "nom_texture": "papier_motif_M"
+      }
+    ]
+  },
+  {
+    "material_id": 12,
+    "nom": "peint_blanc",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 407,
+        "nom_texture": "peinture_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 387,
+        "nom_texture": "peinture_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 235,
+        "nom_texture": "peinture_M"
+      }
+    ]
+  },
+  {
+    "material_id": 13,
+    "nom": "boiserie",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 348,
+        "nom_texture": "boiserie_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 217,
+        "nom_texture": "boiserie_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 410,
+        "nom_texture": "boiserie_M"
+      }
+    ]
+  },
+  {
+    "material_id": 14,
+    "nom": "metal_grisclair",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 15,
+    "nom": "laque_noire",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 16,
+    "nom": "lampe_sodium",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 433,
+        "nom_texture": "uni_M"
+      }
+    ]
+  },
+  {
+    "material_id": 17,
+    "nom": "marbre",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 247,
+        "nom_texture": "marbre_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 405,
+        "nom_texture": "marbre_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 340,
+        "nom_texture": "marbre_M"
+      }
+    ]
+  },
+  {
+    "material_id": 18,
+    "nom": "laque_blanche",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 19,
+    "nom": "enduit_vieilli_gris",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 228,
+        "nom_texture": "enduit_vieilli_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 417,
+        "nom_texture": "enduit_vieilli_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 293,
+        "nom_texture": "enduit_vieilli_M"
+      }
+    ]
+  },
+  {
+    "material_id": 20,
+    "nom": "plastique_rouge",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 21,
+    "nom": "sig_rue_3",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 416,
+        "nom_texture": "sig_rue_3_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 22,
+    "nom": "papier_motif",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 276,
+        "nom_texture": "papier_motif_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 362,
+        "nom_texture": "papier_motif_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 338,
+        "nom_texture": "papier_motif_M"
+      }
+    ]
+  },
+  {
+    "material_id": 23,
+    "nom": "led_rouge",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 433,
+        "nom_texture": "uni_M"
+      }
+    ]
+  },
+  {
+    "material_id": 24,
+    "nom": "plafond",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 407,
+        "nom_texture": "peinture_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 387,
+        "nom_texture": "peinture_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 235,
+        "nom_texture": "peinture_M"
+      }
+    ]
+  },
+  {
+    "material_id": 25,
+    "nom": "fol_platane",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 432,
+        "nom_texture": "fol_feuilles_claires_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 318,
+        "nom_texture": "fol_feuilles_claires_N"
+      },
+      {
+        "propriete": "_MainTex",
+        "texture_id": 432,
+        "nom_texture": "fol_feuilles_claires_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 205,
+        "nom_texture": "DummyMS_00"
+      }
+    ]
+  },
+  {
+    "material_id": 26,
+    "nom": "ens_bat_a",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 311,
+        "nom_texture": "ens_bat_a_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 311,
+        "nom_texture": "ens_bat_a_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 27,
+    "nom": "ens_snack",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 237,
+        "nom_texture": "ens_snack_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 237,
+        "nom_texture": "ens_snack_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 28,
+    "nom": "tuiles",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 326,
+        "nom_texture": "tuiles_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 317,
+        "nom_texture": "tuiles_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 331,
+        "nom_texture": "tuiles_M"
+      }
+    ]
+  },
+  {
+    "material_id": 29,
+    "nom": "bois_fonce",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 206,
+        "nom_texture": "bois_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 300,
+        "nom_texture": "bois_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 427,
+        "nom_texture": "bois_M"
+      }
+    ]
+  },
+  {
+    "material_id": 30,
+    "nom": "aff_tableau_blanc",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 367,
+        "nom_texture": "aff_tableau_blanc_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 31,
+    "nom": "sapin_aiguilles",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 429,
+        "nom_texture": "feuillage_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 376,
+        "nom_texture": "feuillage_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 262,
+        "nom_texture": "feuillage_M"
+      }
+    ]
+  },
+  {
+    "material_id": 32,
+    "nom": "aff_toile_bleu",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 349,
+        "nom_texture": "aff_toile_bleu_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 33,
+    "nom": "rocher_sombre",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 423,
+        "nom_texture": "roche_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 301,
+        "nom_texture": "roche_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 222,
+        "nom_texture": "terrain_M"
+      }
+    ]
+  },
+  {
+    "material_id": 34,
+    "nom": "caoutchouc",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 218,
+        "nom_texture": "caoutchouc_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 392,
+        "nom_texture": "caoutchouc_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 215,
+        "nom_texture": "caoutchouc_M"
+      }
+    ]
+  },
+  {
+    "material_id": 35,
+    "nom": "metal_jaune",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 36,
+    "nom": "zinc_patine",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 266,
+        "nom_texture": "zinc_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 273,
+        "nom_texture": "zinc_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 250,
+        "nom_texture": "zinc_M"
+      }
+    ]
+  },
+  {
+    "material_id": 37,
+    "nom": "refends",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 385,
+        "nom_texture": "refends_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 287,
+        "nom_texture": "refends_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 244,
+        "nom_texture": "refends_M"
+      }
+    ]
+  },
+  {
+    "material_id": 38,
+    "nom": "verre_vitrine",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 302,
+        "nom_texture": "verre_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 305,
+        "nom_texture": "verre_M"
+      }
+    ]
+  },
+  {
+    "material_id": 39,
+    "nom": "imp_sapin",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 315,
+        "nom_texture": "imp_sapin_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 234,
+        "nom_texture": "imp_sapin_N"
+      },
+      {
+        "propriete": "_MainTex",
+        "texture_id": 315,
+        "nom_texture": "imp_sapin_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 205,
+        "nom_texture": "DummyMS_00"
+      }
+    ]
+  },
+  {
+    "material_id": 40,
+    "nom": "beton_sol",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 325,
+        "nom_texture": "beton_sol_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 404,
+        "nom_texture": "beton_sol_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 316,
+        "nom_texture": "beton_sol_M"
+      }
+    ]
+  },
+  {
+    "material_id": 41,
+    "nom": "ecorce",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 308,
+        "nom_texture": "ecorce_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 403,
+        "nom_texture": "ecorce_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 221,
+        "nom_texture": "ecorce_M"
+      }
+    ]
+  },
+  {
+    "material_id": 42,
+    "nom": "horizon_0",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 255,
+        "nom_texture": "horizon_0_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 255,
+        "nom_texture": "horizon_0_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 43,
+    "nom": "beton",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 374,
+        "nom_texture": "beton_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 421,
+        "nom_texture": "beton_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 261,
+        "nom_texture": "beton_M"
+      }
+    ]
+  },
+  {
+    "material_id": 44,
+    "nom": "moquette_grise",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 335,
+        "nom_texture": "moquette_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 320,
+        "nom_texture": "moquette_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 397,
+        "nom_texture": "moquette_M"
+      }
+    ]
+  },
+  {
+    "material_id": 45,
+    "nom": "trottoir",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 357,
+        "nom_texture": "trottoir_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 366,
+        "nom_texture": "trottoir_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 365,
+        "nom_texture": "trottoir_M"
+      }
+    ]
+  },
+  {
+    "material_id": 46,
+    "nom": "ens_alimentation",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 319,
+        "nom_texture": "ens_alimentation_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 319,
+        "nom_texture": "ens_alimentation_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 47,
+    "nom": "fonte",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 48,
+    "nom": "asphalte",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 419,
+        "nom_texture": "asphalte_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 258,
+        "nom_texture": "asphalte_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 382,
+        "nom_texture": "asphalt_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 438,
+        "nom_texture": "asphalte_M"
+      }
+    ]
+  },
+  {
+    "material_id": 49,
+    "nom": "ecorce_platane",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 253,
+        "nom_texture": "ecorce_platane_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 394,
+        "nom_texture": "ecorce_platane_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 424,
+        "nom_texture": "ecorce_platane_M"
+      }
+    ]
+  },
+  {
+    "material_id": 50,
+    "nom": "verre_teinte",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 302,
+        "nom_texture": "verre_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 305,
+        "nom_texture": "verre_M"
+      }
+    ]
+  },
+  {
+    "material_id": 51,
+    "nom": "toit_terrasse",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 414,
+        "nom_texture": "toit_terrasse_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 226,
+        "nom_texture": "toit_terrasse_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 223,
+        "nom_texture": "toit_terrasse_M"
+      }
+    ]
+  },
+  {
+    "material_id": 52,
+    "nom": "peint_creme",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 407,
+        "nom_texture": "peinture_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 387,
+        "nom_texture": "peinture_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 235,
+        "nom_texture": "peinture_M"
+      }
+    ]
+  },
+  {
+    "material_id": 53,
+    "nom": "ens_passage",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 406,
+        "nom_texture": "ens_passage_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 406,
+        "nom_texture": "ens_passage_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 54,
+    "nom": "carton",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 211,
+        "nom_texture": "carton_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 386,
+        "nom_texture": "carton_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 409,
+        "nom_texture": "carton_M"
+      }
+    ]
+  },
+  {
+    "material_id": 55,
+    "nom": "gravier",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 380,
+        "nom_texture": "gravier_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 425,
+        "nom_texture": "gravier_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 238,
+        "nom_texture": "gravier_M"
+      }
+    ]
+  },
+  {
+    "material_id": 56,
+    "nom": "aff_liege",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 257,
+        "nom_texture": "aff_liege_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 57,
+    "nom": "sol_sport",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 58,
+    "nom": "paves",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 341,
+        "nom_texture": "paves_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 219,
+        "nom_texture": "paves_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 216,
+        "nom_texture": "paves_M"
+      }
+    ]
+  },
+  {
+    "material_id": 59,
+    "nom": "terrain_sol",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 260,
+        "nom_texture": "terrain_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 329,
+        "nom_texture": "terrain_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 222,
+        "nom_texture": "terrain_M"
+      }
+    ]
+  },
+  {
+    "material_id": 60,
+    "nom": "plastique_vert",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 61,
+    "nom": "sig_cedez",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 231,
+        "nom_texture": "sig_cedez_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 62,
+    "nom": "rouille",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 378,
+        "nom_texture": "rouille_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 314,
+        "nom_texture": "rouille_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 307,
+        "nom_texture": "rouille_M"
+      }
+    ]
+  },
+  {
+    "material_id": 63,
+    "nom": "billets",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 64,
+    "nom": "fol_feuilles",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 274,
+        "nom_texture": "fol_feuilles_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 333,
+        "nom_texture": "fol_feuilles_N"
+      },
+      {
+        "propriete": "_MainTex",
+        "texture_id": 274,
+        "nom_texture": "fol_feuilles_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 205,
+        "nom_texture": "DummyMS_00"
+      }
+    ]
+  },
+  {
+    "material_id": 65,
+    "nom": "ens_dir_cite",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 243,
+        "nom_texture": "ens_dir_cite_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 243,
+        "nom_texture": "ens_dir_cite_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 66,
+    "nom": "tissu_rouge",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 270,
+        "nom_texture": "tissu_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 220,
+        "nom_texture": "tissu_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 388,
+        "nom_texture": "tissu_M"
+      }
+    ]
+  },
+  {
+    "material_id": 67,
+    "nom": "aff_recherche",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 418,
+        "nom_texture": "aff_recherche_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 68,
+    "nom": "granit",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 363,
+        "nom_texture": "granit_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 303,
+        "nom_texture": "granit_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 283,
+        "nom_texture": "granit_M"
+      }
+    ]
+  },
+  {
+    "material_id": 69,
+    "nom": "sig_rue_1",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 401,
+        "nom_texture": "sig_rue_1_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 70,
+    "nom": "peint_jaune",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 407,
+        "nom_texture": "peinture_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 387,
+        "nom_texture": "peinture_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 235,
+        "nom_texture": "peinture_M"
+      }
+    ]
+  },
+  {
+    "material_id": 71,
+    "nom": "ens_dir_mairie",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 230,
+        "nom_texture": "ens_dir_mairie_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 230,
+        "nom_texture": "ens_dir_mairie_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 72,
+    "nom": "verre_ambre",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 302,
+        "nom_texture": "verre_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 305,
+        "nom_texture": "verre_M"
+      }
+    ]
+  },
+  {
+    "material_id": 73,
+    "nom": "ens_police",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 232,
+        "nom_texture": "ens_police_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 232,
+        "nom_texture": "ens_police_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 74,
+    "nom": "metal_vertfonce",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 75,
+    "nom": "ens_mairie",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 355,
+        "nom_texture": "ens_mairie_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 355,
+        "nom_texture": "ens_mairie_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 76,
+    "nom": "bois",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 206,
+        "nom_texture": "bois_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 300,
+        "nom_texture": "bois_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 427,
+        "nom_texture": "bois_M"
+      }
+    ]
+  },
+  {
+    "material_id": 77,
+    "nom": "fol_feuilles_claires",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 432,
+        "nom_texture": "fol_feuilles_claires_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 318,
+        "nom_texture": "fol_feuilles_claires_N"
+      },
+      {
+        "propriete": "_MainTex",
+        "texture_id": 432,
+        "nom_texture": "fol_feuilles_claires_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 205,
+        "nom_texture": "DummyMS_00"
+      }
+    ]
+  },
+  {
+    "material_id": 78,
+    "nom": "faience_bleue",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 411,
+        "nom_texture": "faience_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 377,
+        "nom_texture": "faience_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 372,
+        "nom_texture": "faience_M"
+      }
+    ]
+  },
+  {
+    "material_id": 79,
+    "nom": "sol_souple",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 80,
+    "nom": "aff_menu_snack",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 373,
+        "nom_texture": "aff_menu_snack_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 81,
+    "nom": "fol_fleurs_rouges",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 274,
+        "nom_texture": "fol_feuilles_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 333,
+        "nom_texture": "fol_feuilles_N"
+      },
+      {
+        "propriete": "_MainTex",
+        "texture_id": 274,
+        "nom_texture": "fol_feuilles_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 205,
+        "nom_texture": "DummyMS_00"
+      }
+    ]
+  },
+  {
+    "material_id": 82,
+    "nom": "velours",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 281,
+        "nom_texture": "velours_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 391,
+        "nom_texture": "velours_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 207,
+        "nom_texture": "velours_M"
+      }
+    ]
+  },
+  {
+    "material_id": 83,
+    "nom": "parquet_chevron",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 265,
+        "nom_texture": "parquet_chevron_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 359,
+        "nom_texture": "parquet_chevron_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 252,
+        "nom_texture": "parquet_chevron_M"
+      }
+    ]
+  },
+  {
+    "material_id": 84,
+    "nom": "parquet_chevron_fonce",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 265,
+        "nom_texture": "parquet_chevron_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 359,
+        "nom_texture": "parquet_chevron_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 252,
+        "nom_texture": "parquet_chevron_M"
+      }
+    ]
+  },
+  {
+    "material_id": 85,
+    "nom": "faience",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 411,
+        "nom_texture": "faience_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 377,
+        "nom_texture": "faience_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 372,
+        "nom_texture": "faience_M"
+      }
+    ]
+  },
+  {
+    "material_id": 86,
+    "nom": "ens_plaque_prive",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 264,
+        "nom_texture": "ens_plaque_prive_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 264,
+        "nom_texture": "ens_plaque_prive_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 87,
+    "nom": "feuillage_olivier",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 259,
+        "nom_texture": "feuillage_olivier_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 282,
+        "nom_texture": "feuillage_olivier_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 229,
+        "nom_texture": "feuillage_olivier_M"
+      }
+    ]
+  },
+  {
+    "material_id": 88,
+    "nom": "toile_sac",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 270,
+        "nom_texture": "tissu_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 220,
+        "nom_texture": "tissu_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 388,
+        "nom_texture": "tissu_M"
+      }
+    ]
+  },
+  {
+    "material_id": 89,
+    "nom": "tissu_noir",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 270,
+        "nom_texture": "tissu_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 220,
+        "nom_texture": "tissu_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 388,
+        "nom_texture": "tissu_M"
+      }
+    ]
+  },
+  {
+    "material_id": 90,
+    "nom": "plastique_orange",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 91,
+    "nom": "eau_piscine",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 296,
+        "nom_texture": "eau_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 431,
+        "nom_texture": "eau_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 313,
+        "nom_texture": "eau_M"
+      }
+    ]
+  },
+  {
+    "material_id": 92,
+    "nom": "sig_rue_2",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 339,
+        "nom_texture": "sig_rue_2_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 93,
+    "nom": "cuir_noir",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 236,
+        "nom_texture": "cuir_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 350,
+        "nom_texture": "cuir_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 334,
+        "nom_texture": "cuir_M"
+      }
+    ]
+  },
+  {
+    "material_id": 94,
+    "nom": "ens_logistique",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 251,
+        "nom_texture": "ens_logistique_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 251,
+        "nom_texture": "ens_logistique_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 95,
+    "nom": "dalles_granit",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 422,
+        "nom_texture": "dalles_granit_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 239,
+        "nom_texture": "dalles_granit_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 337,
+        "nom_texture": "dalles_granit_M"
+      }
+    ]
+  },
+  {
+    "material_id": 96,
+    "nom": "peint_beige",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 407,
+        "nom_texture": "peinture_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 387,
+        "nom_texture": "peinture_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 235,
+        "nom_texture": "peinture_M"
+      }
+    ]
+  },
+  {
+    "material_id": 97,
+    "nom": "ens_souterrain",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 323,
+        "nom_texture": "ens_souterrain_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 323,
+        "nom_texture": "ens_souterrain_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 98,
+    "nom": "Ciel_Jour",
+    "textures": []
+  },
+  {
+    "material_id": 99,
+    "nom": "affiche_spawn",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 279,
+        "nom_texture": "affiche_darkrp_ler"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 279,
+        "nom_texture": "affiche_darkrp_ler"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 100,
+    "nom": "ens_casino",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 322,
+        "nom_texture": "ens_casino_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 322,
+        "nom_texture": "ens_casino_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 101,
+    "nom": "peint_vertanglais",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 407,
+        "nom_texture": "peinture_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 387,
+        "nom_texture": "peinture_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 235,
+        "nom_texture": "peinture_M"
+      }
+    ]
+  },
+  {
+    "material_id": 102,
+    "nom": "enduit_vieilli_blanc",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 228,
+        "nom_texture": "enduit_vieilli_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 417,
+        "nom_texture": "enduit_vieilli_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 293,
+        "nom_texture": "enduit_vieilli_M"
+      }
+    ]
+  },
+  {
+    "material_id": 103,
+    "nom": "tissu_bleu",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 270,
+        "nom_texture": "tissu_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 220,
+        "nom_texture": "tissu_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 388,
+        "nom_texture": "tissu_M"
+      }
+    ]
+  },
+  {
+    "material_id": 104,
+    "nom": "ens_devise",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 246,
+        "nom_texture": "ens_devise_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 246,
+        "nom_texture": "ens_devise_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 105,
+    "nom": "fol_haie",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 267,
+        "nom_texture": "fol_haie_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 288,
+        "nom_texture": "fol_haie_N"
+      },
+      {
+        "propriete": "_MainTex",
+        "texture_id": 267,
+        "nom_texture": "fol_haie_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 205,
+        "nom_texture": "DummyMS_00"
+      }
+    ]
+  },
+  {
+    "material_id": 106,
+    "nom": "aff_produits",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 280,
+        "nom_texture": "aff_produits_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 107,
+    "nom": "terrain",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 260,
+        "nom_texture": "terrain_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 329,
+        "nom_texture": "terrain_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 222,
+        "nom_texture": "terrain_M"
+      }
+    ]
+  },
+  {
+    "material_id": 108,
+    "nom": "fonte_verte",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 109,
+    "nom": "laque_creme",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 110,
+    "nom": "aff_distributeur",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 369,
+        "nom_texture": "aff_distributeur_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 111,
+    "nom": "led_verte",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 433,
+        "nom_texture": "uni_M"
+      }
+    ]
+  },
+  {
+    "material_id": 112,
+    "nom": "imp_feuillu",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 371,
+        "nom_texture": "imp_feuillu_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 408,
+        "nom_texture": "imp_feuillu_N"
+      },
+      {
+        "propriete": "_MainTex",
+        "texture_id": 371,
+        "nom_texture": "imp_feuillu_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 205,
+        "nom_texture": "DummyMS_00"
+      }
+    ]
+  },
+  {
+    "material_id": 113,
+    "nom": "carrelage",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 437,
+        "nom_texture": "carrelage_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 321,
+        "nom_texture": "carrelage_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 306,
+        "nom_texture": "carrelage_M"
+      }
+    ]
+  },
+  {
+    "material_id": 114,
+    "nom": "miroir",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 271,
+        "nom_texture": "chrome_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 368,
+        "nom_texture": "chrome_M"
+      }
+    ]
+  },
+  {
+    "material_id": 115,
+    "nom": "herbe",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 324,
+        "nom_texture": "herbe_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 393,
+        "nom_texture": "herbe_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 361,
+        "nom_texture": "herbe_M"
+      }
+    ]
+  },
+  {
+    "material_id": 116,
+    "nom": "ardoise2",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 233,
+        "nom_texture": "ardoise2_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 290,
+        "nom_texture": "ardoise2_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 240,
+        "nom_texture": "ardoise2_M"
+      }
+    ]
+  },
+  {
+    "material_id": 117,
+    "nom": "chrome",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 271,
+        "nom_texture": "chrome_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 368,
+        "nom_texture": "chrome_M"
+      }
+    ]
+  },
+  {
+    "material_id": 118,
+    "nom": "enduit_vieilli_ocre",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 228,
+        "nom_texture": "enduit_vieilli_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 417,
+        "nom_texture": "enduit_vieilli_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 293,
+        "nom_texture": "enduit_vieilli_M"
+      }
+    ]
+  },
+  {
+    "material_id": 119,
+    "nom": "zinc",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 266,
+        "nom_texture": "zinc_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 273,
+        "nom_texture": "zinc_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 250,
+        "nom_texture": "zinc_M"
+      }
+    ]
+  },
+  {
+    "material_id": 120,
+    "nom": "chene",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 206,
+        "nom_texture": "bois_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 300,
+        "nom_texture": "bois_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 427,
+        "nom_texture": "bois_M"
+      }
+    ]
+  },
+  {
+    "material_id": 121,
+    "nom": "lanterne_verre",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 302,
+        "nom_texture": "verre_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 305,
+        "nom_texture": "verre_M"
+      }
+    ]
+  },
+  {
+    "material_id": 122,
+    "nom": "aff_drapeau",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 224,
+        "nom_texture": "aff_drapeau_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 123,
+    "nom": "plastique_noir",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 124,
+    "nom": "terre",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 297,
+        "nom_texture": "terre_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 277,
+        "nom_texture": "terre_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 396,
+        "nom_texture": "terre_M"
+      }
+    ]
+  },
+  {
+    "material_id": 125,
+    "nom": "metal_vert",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 126,
+    "nom": "porcelaine",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 127,
+    "nom": "beton_brut",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 374,
+        "nom_texture": "beton_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 421,
+        "nom_texture": "beton_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 261,
+        "nom_texture": "beton_M"
+      }
+    ]
+  },
+  {
+    "material_id": 128,
+    "nom": "plastique_gris",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 129,
+    "nom": "plastique_jaune",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 130,
+    "nom": "peint_bleu",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 407,
+        "nom_texture": "peinture_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 387,
+        "nom_texture": "peinture_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 235,
+        "nom_texture": "peinture_M"
+      }
+    ]
+  },
+  {
+    "material_id": 131,
+    "nom": "acier_satine",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 132,
+    "nom": "ens_residence",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 263,
+        "nom_texture": "ens_residence_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 263,
+        "nom_texture": "ens_residence_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 133,
+    "nom": "metal_blanc",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 134,
+    "nom": "parquet",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 398,
+        "nom_texture": "parquet_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 227,
+        "nom_texture": "parquet_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 254,
+        "nom_texture": "parquet_M"
+      }
+    ]
+  },
+  {
+    "material_id": 135,
+    "nom": "papier_rayures",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 420,
+        "nom_texture": "papier_rayures_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 291,
+        "nom_texture": "papier_rayures_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 415,
+        "nom_texture": "papier_rayures_M"
+      }
+    ]
+  },
+  {
+    "material_id": 136,
+    "nom": "dallage",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 412,
+        "nom_texture": "dallage_place_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 330,
+        "nom_texture": "dallage_place_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 294,
+        "nom_texture": "dallage_place_M"
+      }
+    ]
+  },
+  {
+    "material_id": 137,
+    "nom": "rocher",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 423,
+        "nom_texture": "roche_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 301,
+        "nom_texture": "roche_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 222,
+        "nom_texture": "terrain_M"
+      }
+    ]
+  },
+  {
+    "material_id": 138,
+    "nom": "velours_vert",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 281,
+        "nom_texture": "velours_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 391,
+        "nom_texture": "velours_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 207,
+        "nom_texture": "velours_M"
+      }
+    ]
+  },
+  {
+    "material_id": 139,
+    "nom": "pierre",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 346,
+        "nom_texture": "pierre_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 242,
+        "nom_texture": "pierre_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 285,
+        "nom_texture": "pierre_M"
+      }
+    ]
+  },
+  {
+    "material_id": 140,
+    "nom": "metal_bleu",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 141,
+    "nom": "or",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 271,
+        "nom_texture": "chrome_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 368,
+        "nom_texture": "chrome_M"
+      }
+    ]
+  },
+  {
+    "material_id": 142,
+    "nom": "eau",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 296,
+        "nom_texture": "eau_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 431,
+        "nom_texture": "eau_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 313,
+        "nom_texture": "eau_M"
+      }
+    ]
+  },
+  {
+    "material_id": 143,
+    "nom": "enduit_vieilli_rose",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 228,
+        "nom_texture": "enduit_vieilli_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 417,
+        "nom_texture": "enduit_vieilli_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 293,
+        "nom_texture": "enduit_vieilli_M"
+      }
+    ]
+  },
+  {
+    "material_id": 144,
+    "nom": "ens_bat_b",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 299,
+        "nom_texture": "ens_bat_b_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 299,
+        "nom_texture": "ens_bat_b_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 145,
+    "nom": "plastique_bleu",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 146,
+    "nom": "aff_horloge",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 213,
+        "nom_texture": "aff_horloge_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 147,
+    "nom": "neon_blanc",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 433,
+        "nom_texture": "uni_M"
+      }
+    ]
+  },
+  {
+    "material_id": 148,
+    "nom": "asphalte_parking",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 347,
+        "nom_texture": "asphalte_parking_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 352,
+        "nom_texture": "asphalte_parking_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 382,
+        "nom_texture": "asphalt_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 256,
+        "nom_texture": "asphalte_parking_M"
+      }
+    ]
+  },
+  {
+    "material_id": 149,
+    "nom": "ens_sortie",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 345,
+        "nom_texture": "ens_sortie_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 345,
+        "nom_texture": "ens_sortie_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 150,
+    "nom": "lin_beige",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 270,
+        "nom_texture": "tissu_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 220,
+        "nom_texture": "tissu_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 388,
+        "nom_texture": "tissu_M"
+      }
+    ]
+  },
+  {
+    "material_id": 151,
+    "nom": "lampe",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 433,
+        "nom_texture": "uni_M"
+      }
+    ]
+  },
+  {
+    "material_id": 152,
+    "nom": "lampe_led",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 433,
+        "nom_texture": "uni_M"
+      }
+    ]
+  },
+  {
+    "material_id": 153,
+    "nom": "metal_orange",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 154,
+    "nom": "bois_clair",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 206,
+        "nom_texture": "bois_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 300,
+        "nom_texture": "bois_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 427,
+        "nom_texture": "bois_M"
+      }
+    ]
+  },
+  {
+    "material_id": 155,
+    "nom": "fol_olivier",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 436,
+        "nom_texture": "fol_olivier_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 327,
+        "nom_texture": "fol_olivier_N"
+      },
+      {
+        "propriete": "_MainTex",
+        "texture_id": 436,
+        "nom_texture": "fol_olivier_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 205,
+        "nom_texture": "DummyMS_00"
+      }
+    ]
+  },
+  {
+    "material_id": 156,
+    "nom": "peinture_blanche",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 433,
+        "nom_texture": "uni_M"
+      }
+    ]
+  },
+  {
+    "material_id": 157,
+    "nom": "dos_panneau",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 158,
+    "nom": "ecran_bureau",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 384,
+        "nom_texture": "scr_bureau_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 384,
+        "nom_texture": "scr_bureau_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 159,
+    "nom": "velours_bleu",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 281,
+        "nom_texture": "velours_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 391,
+        "nom_texture": "velours_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 207,
+        "nom_texture": "velours_M"
+      }
+    ]
+  },
+  {
+    "material_id": 160,
+    "nom": "abat_jour",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 270,
+        "nom_texture": "tissu_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 220,
+        "nom_texture": "tissu_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 275,
+        "nom_texture": "uni_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 388,
+        "nom_texture": "tissu_M"
+      }
+    ]
+  },
+  {
+    "material_id": 161,
+    "nom": "pierre_moulure",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 228,
+        "nom_texture": "enduit_vieilli_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 417,
+        "nom_texture": "enduit_vieilli_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 293,
+        "nom_texture": "enduit_vieilli_M"
+      }
+    ]
+  },
+  {
+    "material_id": 162,
+    "nom": "pave_beton",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 430,
+        "nom_texture": "pave_beton_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 332,
+        "nom_texture": "pave_beton_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 208,
+        "nom_texture": "noise_detailmap"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 289,
+        "nom_texture": "pave_beton_M"
+      }
+    ]
+  },
+  {
+    "material_id": 163,
+    "nom": "ecran_cam",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 312,
+        "nom_texture": "scr_cam_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 312,
+        "nom_texture": "scr_cam_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 164,
+    "nom": "lin_gris",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 270,
+        "nom_texture": "tissu_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 220,
+        "nom_texture": "tissu_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 388,
+        "nom_texture": "tissu_M"
+      }
+    ]
+  },
+  {
+    "material_id": 165,
+    "nom": "tissu_blanc",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 270,
+        "nom_texture": "tissu_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 220,
+        "nom_texture": "tissu_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 388,
+        "nom_texture": "tissu_M"
+      }
+    ]
+  },
+  {
+    "material_id": 166,
+    "nom": "horizon_1",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 364,
+        "nom_texture": "horizon_1_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 364,
+        "nom_texture": "horizon_1_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 167,
+    "nom": "verre_bouteille",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 302,
+        "nom_texture": "verre_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 305,
+        "nom_texture": "verre_M"
+      }
+    ]
+  },
+  {
+    "material_id": 168,
+    "nom": "ens_armurerie",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 284,
+        "nom_texture": "ens_armurerie_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 284,
+        "nom_texture": "ens_armurerie_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 169,
+    "nom": "plastique_blanc",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 170,
+    "nom": "verre",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 302,
+        "nom_texture": "verre_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 305,
+        "nom_texture": "verre_M"
+      }
+    ]
+  },
+  {
+    "material_id": 171,
+    "nom": "bardage_gris",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 356,
+        "nom_texture": "bardage_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 249,
+        "nom_texture": "bardage_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 210,
+        "nom_texture": "Metal_DirtyOldIndustry_Substance_detailmap_subtle"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 354,
+        "nom_texture": "bardage_M"
+      }
+    ]
+  },
+  {
+    "material_id": 172,
+    "nom": "haie",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 336,
+        "nom_texture": "haie_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 212,
+        "nom_texture": "haie_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 399,
+        "nom_texture": "haie_M"
+      }
+    ]
+  },
+  {
+    "material_id": 173,
+    "nom": "lino_gris",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 328,
+        "nom_texture": "lino_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 268,
+        "nom_texture": "lino_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 286,
+        "nom_texture": "lino_M"
+      }
+    ]
+  },
+  {
+    "material_id": 174,
+    "nom": "cuir_brun",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 236,
+        "nom_texture": "cuir_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 350,
+        "nom_texture": "cuir_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 334,
+        "nom_texture": "cuir_M"
+      }
+    ]
+  },
+  {
+    "material_id": 175,
+    "nom": "bardage_bois",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 379,
+        "nom_texture": "bardage_bois_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 390,
+        "nom_texture": "bardage_bois_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 383,
+        "nom_texture": "bardage_bois_M"
+      }
+    ]
+  },
+  {
+    "material_id": 176,
+    "nom": "verre_sombre",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 302,
+        "nom_texture": "verre_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 305,
+        "nom_texture": "verre_M"
+      }
+    ]
+  },
+  {
+    "material_id": 177,
+    "nom": "tapis",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 292,
+        "nom_texture": "tapis_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 241,
+        "nom_texture": "tapis_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 402,
+        "nom_texture": "tapis_M"
+      }
+    ]
+  },
+  {
+    "material_id": 178,
+    "nom": "brique",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 435,
+        "nom_texture": "brique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 272,
+        "nom_texture": "brique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 278,
+        "nom_texture": "brique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 179,
+    "nom": "laque_vert",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 344,
+        "nom_texture": "plastique_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 209,
+        "nom_texture": "plastique_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 389,
+        "nom_texture": "plastique_M"
+      }
+    ]
+  },
+  {
+    "material_id": 180,
+    "nom": "plafond_moulure",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 407,
+        "nom_texture": "peinture_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 387,
+        "nom_texture": "peinture_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 235,
+        "nom_texture": "peinture_M"
+      }
+    ]
+  },
+  {
+    "material_id": 181,
+    "nom": "acier",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 343,
+        "nom_texture": "acier_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 381,
+        "nom_texture": "acier_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 225,
+        "nom_texture": "acier_M"
+      }
+    ]
+  },
+  {
+    "material_id": 182,
+    "nom": "moquette_casino",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 353,
+        "nom_texture": "moquette_casino_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 269,
+        "nom_texture": "moquette_casino_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 370,
+        "nom_texture": "moquette_casino_M"
+      }
+    ]
+  },
+  {
+    "material_id": 183,
+    "nom": "ens_technique",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 310,
+        "nom_texture": "ens_technique_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 310,
+        "nom_texture": "ens_technique_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 184,
+    "nom": "noyer",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 206,
+        "nom_texture": "bois_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 300,
+        "nom_texture": "bois_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 427,
+        "nom_texture": "bois_M"
+      }
+    ]
+  },
+  {
+    "material_id": 185,
+    "nom": "pin",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 351,
+        "nom_texture": "pin_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 214,
+        "nom_texture": "pin_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 295,
+        "nom_texture": "pin_M"
+      }
+    ]
+  },
+  {
+    "material_id": 186,
+    "nom": "ecran_tv",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 304,
+        "nom_texture": "scr_tv_A"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_EmissionMap",
+        "texture_id": 304,
+        "nom_texture": "scr_tv_A"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 413,
+        "nom_texture": "MAS_M00_S30"
+      }
+    ]
+  },
+  {
+    "material_id": 187,
+    "nom": "moquette_bleue",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 335,
+        "nom_texture": "moquette_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 320,
+        "nom_texture": "moquette_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 397,
+        "nom_texture": "moquette_M"
+      }
+    ]
+  },
+  {
+    "material_id": 188,
+    "nom": "terrazzo",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 375,
+        "nom_texture": "terrazzo_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 428,
+        "nom_texture": "terrazzo_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 426,
+        "nom_texture": "terrazzo_M"
+      }
+    ]
+  },
+  {
+    "material_id": 189,
+    "nom": "metal_rouge",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 360,
+        "nom_texture": "DefaultDetail"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  },
+  {
+    "material_id": 190,
+    "nom": "metal_gris",
+    "textures": [
+      {
+        "propriete": "_BaseMap",
+        "texture_id": 395,
+        "nom_texture": "metal_peint_A"
+      },
+      {
+        "propriete": "_BumpMap",
+        "texture_id": 434,
+        "nom_texture": "metal_peint_N"
+      },
+      {
+        "propriete": "_DetailMap",
+        "texture_id": 210,
+        "nom_texture": "Metal_DirtyOldIndustry_Substance_detailmap_subtle"
+      },
+      {
+        "propriete": "_MetallicGlossMap",
+        "texture_id": 400,
+        "nom_texture": "metal_peint_M"
+      }
+    ]
+  }
+]

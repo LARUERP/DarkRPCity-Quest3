@@ -1,0 +1,1815 @@
+# DarkRPCity - Materiaux reconstruits
+# Sources : manifeste Unity et textures originales
+
+newmtl MAT_3
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/270_tissu_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/220_tissu_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/388_tissu_M.png
+
+newmtl MAT_4
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/298_carrelage_gres_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/245_carrelage_gres_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/309_carrelage_gres_M.png
+
+newmtl MAT_5
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_6
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/271_chrome_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/368_chrome_M.png
+
+newmtl MAT_7
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/374_beton_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/421_beton_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/261_beton_M.png
+
+newmtl MAT_8
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/374_beton_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/421_beton_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/261_beton_M.png
+
+newmtl MAT_9
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/248_dalles_plafond_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/342_dalles_plafond_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/358_dalles_plafond_M.png
+
+newmtl MAT_10
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/407_peinture_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/387_peinture_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/235_peinture_M.png
+
+newmtl MAT_11
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/276_papier_motif_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/362_papier_motif_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/338_papier_motif_M.png
+
+newmtl MAT_12
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/407_peinture_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/387_peinture_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/235_peinture_M.png
+
+newmtl MAT_13
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/348_boiserie_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/217_boiserie_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/410_boiserie_M.png
+
+newmtl MAT_14
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_15
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_16
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/275_uni_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/433_uni_M.png
+
+newmtl MAT_17
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/247_marbre_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/405_marbre_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/340_marbre_M.png
+
+newmtl MAT_18
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_19
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/228_enduit_vieilli_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/417_enduit_vieilli_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/293_enduit_vieilli_M.png
+
+newmtl MAT_20
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_21
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/416_sig_rue_3_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_22
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/276_papier_motif_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/362_papier_motif_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/338_papier_motif_M.png
+
+newmtl MAT_23
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/275_uni_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/433_uni_M.png
+
+newmtl MAT_24
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/407_peinture_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/387_peinture_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/235_peinture_M.png
+
+newmtl MAT_25
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/432_fol_feuilles_claires_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/318_fol_feuilles_claires_N.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/205_DummyMS_00.png
+
+newmtl MAT_26
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/311_ens_bat_a_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_27
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/237_ens_snack_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_28
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/326_tuiles_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/317_tuiles_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/331_tuiles_M.png
+
+newmtl MAT_29
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/206_bois_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/300_bois_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/427_bois_M.png
+
+newmtl MAT_30
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/367_aff_tableau_blanc_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_31
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/429_feuillage_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/376_feuillage_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/262_feuillage_M.png
+
+newmtl MAT_32
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/349_aff_toile_bleu_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_33
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/423_roche_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/301_roche_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/222_terrain_M.png
+
+newmtl MAT_34
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/218_caoutchouc_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/392_caoutchouc_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/215_caoutchouc_M.png
+
+newmtl MAT_35
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_36
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/266_zinc_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/273_zinc_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/250_zinc_M.png
+
+newmtl MAT_37
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/385_refends_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/287_refends_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/244_refends_M.png
+
+newmtl MAT_38
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/302_verre_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/305_verre_M.png
+
+newmtl MAT_39
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/315_imp_sapin_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/234_imp_sapin_N.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/205_DummyMS_00.png
+
+newmtl MAT_40
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/325_beton_sol_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/404_beton_sol_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/316_beton_sol_M.png
+
+newmtl MAT_41
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/308_ecorce_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/403_ecorce_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/221_ecorce_M.png
+
+newmtl MAT_42
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/255_horizon_0_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_43
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/374_beton_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/421_beton_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/261_beton_M.png
+
+newmtl MAT_44
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/335_moquette_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/320_moquette_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/397_moquette_M.png
+
+newmtl MAT_45
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/357_trottoir_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/366_trottoir_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/365_trottoir_M.png
+
+newmtl MAT_46
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/319_ens_alimentation_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_47
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_48
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/419_asphalte_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/258_asphalte_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/382_asphalt_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/438_asphalte_M.png
+
+newmtl MAT_49
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/253_ecorce_platane_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/394_ecorce_platane_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/424_ecorce_platane_M.png
+
+newmtl MAT_50
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/302_verre_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/305_verre_M.png
+
+newmtl MAT_51
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/414_toit_terrasse_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/226_toit_terrasse_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/223_toit_terrasse_M.png
+
+newmtl MAT_52
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/407_peinture_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/387_peinture_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/235_peinture_M.png
+
+newmtl MAT_53
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/406_ens_passage_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_54
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/211_carton_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/386_carton_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/409_carton_M.png
+
+newmtl MAT_55
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/380_gravier_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/425_gravier_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/238_gravier_M.png
+
+newmtl MAT_56
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/257_aff_liege_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_57
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_58
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/341_paves_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/219_paves_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/216_paves_M.png
+
+newmtl MAT_59
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/260_terrain_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/329_terrain_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/222_terrain_M.png
+
+newmtl MAT_60
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_61
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/231_sig_cedez_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_62
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/378_rouille_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/314_rouille_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/307_rouille_M.png
+
+newmtl MAT_63
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_64
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/274_fol_feuilles_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/333_fol_feuilles_N.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/205_DummyMS_00.png
+
+newmtl MAT_65
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/243_ens_dir_cite_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_66
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/270_tissu_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/220_tissu_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/388_tissu_M.png
+
+newmtl MAT_67
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/418_aff_recherche_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_68
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/363_granit_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/303_granit_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/283_granit_M.png
+
+newmtl MAT_69
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/401_sig_rue_1_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_70
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/407_peinture_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/387_peinture_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/235_peinture_M.png
+
+newmtl MAT_71
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/230_ens_dir_mairie_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_72
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/302_verre_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/305_verre_M.png
+
+newmtl MAT_73
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/232_ens_police_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_74
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_75
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/355_ens_mairie_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_76
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/206_bois_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/300_bois_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/427_bois_M.png
+
+newmtl MAT_77
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/432_fol_feuilles_claires_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/318_fol_feuilles_claires_N.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/205_DummyMS_00.png
+
+newmtl MAT_78
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/411_faience_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/377_faience_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/372_faience_M.png
+
+newmtl MAT_79
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_80
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/373_aff_menu_snack_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_81
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/274_fol_feuilles_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/333_fol_feuilles_N.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/205_DummyMS_00.png
+
+newmtl MAT_82
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/281_velours_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/391_velours_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/207_velours_M.png
+
+newmtl MAT_83
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/265_parquet_chevron_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/359_parquet_chevron_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/252_parquet_chevron_M.png
+
+newmtl MAT_84
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/265_parquet_chevron_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/359_parquet_chevron_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/252_parquet_chevron_M.png
+
+newmtl MAT_85
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/411_faience_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/377_faience_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/372_faience_M.png
+
+newmtl MAT_86
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/264_ens_plaque_prive_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_87
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/259_feuillage_olivier_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/282_feuillage_olivier_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/229_feuillage_olivier_M.png
+
+newmtl MAT_88
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/270_tissu_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/220_tissu_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/388_tissu_M.png
+
+newmtl MAT_89
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/270_tissu_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/220_tissu_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/388_tissu_M.png
+
+newmtl MAT_90
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_91
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/296_eau_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/431_eau_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/313_eau_M.png
+
+newmtl MAT_92
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/339_sig_rue_2_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_93
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/236_cuir_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/350_cuir_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/334_cuir_M.png
+
+newmtl MAT_94
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/251_ens_logistique_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_95
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/422_dalles_granit_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/239_dalles_granit_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/337_dalles_granit_M.png
+
+newmtl MAT_96
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/407_peinture_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/387_peinture_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/235_peinture_M.png
+
+newmtl MAT_97
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/323_ens_souterrain_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_98
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+
+newmtl MAT_99
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/279_affiche_darkrp_ler.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_100
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/322_ens_casino_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_101
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/407_peinture_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/387_peinture_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/235_peinture_M.png
+
+newmtl MAT_102
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/228_enduit_vieilli_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/417_enduit_vieilli_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/293_enduit_vieilli_M.png
+
+newmtl MAT_103
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/270_tissu_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/220_tissu_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/388_tissu_M.png
+
+newmtl MAT_104
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/246_ens_devise_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_105
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/267_fol_haie_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/288_fol_haie_N.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/205_DummyMS_00.png
+
+newmtl MAT_106
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/280_aff_produits_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_107
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/260_terrain_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/329_terrain_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/222_terrain_M.png
+
+newmtl MAT_108
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_109
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_110
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/369_aff_distributeur_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_111
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/275_uni_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/433_uni_M.png
+
+newmtl MAT_112
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/371_imp_feuillu_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/408_imp_feuillu_N.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/205_DummyMS_00.png
+
+newmtl MAT_113
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/437_carrelage_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/321_carrelage_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/306_carrelage_M.png
+
+newmtl MAT_114
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/271_chrome_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/368_chrome_M.png
+
+newmtl MAT_115
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/324_herbe_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/393_herbe_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/361_herbe_M.png
+
+newmtl MAT_116
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/233_ardoise2_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/290_ardoise2_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/240_ardoise2_M.png
+
+newmtl MAT_117
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/271_chrome_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/368_chrome_M.png
+
+newmtl MAT_118
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/228_enduit_vieilli_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/417_enduit_vieilli_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/293_enduit_vieilli_M.png
+
+newmtl MAT_119
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/266_zinc_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/273_zinc_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/250_zinc_M.png
+
+newmtl MAT_120
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/206_bois_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/300_bois_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/427_bois_M.png
+
+newmtl MAT_121
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/302_verre_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/305_verre_M.png
+
+newmtl MAT_122
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/224_aff_drapeau_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_123
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_124
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/297_terre_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/277_terre_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/396_terre_M.png
+
+newmtl MAT_125
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_126
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_127
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/374_beton_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/421_beton_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/261_beton_M.png
+
+newmtl MAT_128
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_129
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_130
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/407_peinture_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/387_peinture_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/235_peinture_M.png
+
+newmtl MAT_131
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_132
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/263_ens_residence_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_133
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_134
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/398_parquet_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/227_parquet_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/254_parquet_M.png
+
+newmtl MAT_135
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/420_papier_rayures_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/291_papier_rayures_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/415_papier_rayures_M.png
+
+newmtl MAT_136
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/412_dallage_place_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/330_dallage_place_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/294_dallage_place_M.png
+
+newmtl MAT_137
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/423_roche_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/301_roche_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/222_terrain_M.png
+
+newmtl MAT_138
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/281_velours_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/391_velours_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/207_velours_M.png
+
+newmtl MAT_139
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/346_pierre_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/242_pierre_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/285_pierre_M.png
+
+newmtl MAT_140
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_141
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/271_chrome_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/368_chrome_M.png
+
+newmtl MAT_142
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/296_eau_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/431_eau_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/313_eau_M.png
+
+newmtl MAT_143
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/228_enduit_vieilli_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/417_enduit_vieilli_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/293_enduit_vieilli_M.png
+
+newmtl MAT_144
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/299_ens_bat_b_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_145
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_146
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/213_aff_horloge_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_147
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/275_uni_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/433_uni_M.png
+
+newmtl MAT_148
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/347_asphalte_parking_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/352_asphalte_parking_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/382_asphalt_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/256_asphalte_parking_M.png
+
+newmtl MAT_149
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/345_ens_sortie_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_150
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/270_tissu_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/220_tissu_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/388_tissu_M.png
+
+newmtl MAT_151
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/275_uni_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/433_uni_M.png
+
+newmtl MAT_152
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/275_uni_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/433_uni_M.png
+
+newmtl MAT_153
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_154
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/206_bois_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/300_bois_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/427_bois_M.png
+
+newmtl MAT_155
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/436_fol_olivier_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/327_fol_olivier_N.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/205_DummyMS_00.png
+
+newmtl MAT_156
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/275_uni_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/433_uni_M.png
+
+newmtl MAT_157
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_158
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/384_scr_bureau_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_159
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/281_velours_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/391_velours_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/207_velours_M.png
+
+newmtl MAT_160
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/270_tissu_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/220_tissu_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/388_tissu_M.png
+
+newmtl MAT_161
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/228_enduit_vieilli_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/417_enduit_vieilli_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/293_enduit_vieilli_M.png
+
+newmtl MAT_162
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/430_pave_beton_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/332_pave_beton_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/208_noise_detailmap.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/289_pave_beton_M.png
+
+newmtl MAT_163
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/312_scr_cam_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_164
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/270_tissu_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/220_tissu_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/388_tissu_M.png
+
+newmtl MAT_165
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/270_tissu_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/220_tissu_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/388_tissu_M.png
+
+newmtl MAT_166
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/364_horizon_1_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_167
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/302_verre_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/305_verre_M.png
+
+newmtl MAT_168
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/284_ens_armurerie_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_169
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_170
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/302_verre_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/305_verre_M.png
+
+newmtl MAT_171
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/356_bardage_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/249_bardage_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/210_Metal_DirtyOldIndustry_Substance_detailmap_subtle.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/354_bardage_M.png
+
+newmtl MAT_172
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/336_haie_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/212_haie_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/399_haie_M.png
+
+newmtl MAT_173
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/328_lino_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/268_lino_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/286_lino_M.png
+
+newmtl MAT_174
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/236_cuir_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/350_cuir_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/334_cuir_M.png
+
+newmtl MAT_175
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/379_bardage_bois_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/390_bardage_bois_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/383_bardage_bois_M.png
+
+newmtl MAT_176
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/302_verre_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/305_verre_M.png
+
+newmtl MAT_177
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/292_tapis_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/241_tapis_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/402_tapis_M.png
+
+newmtl MAT_178
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/435_brique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/272_brique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/278_brique_M.png
+
+newmtl MAT_179
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/344_plastique_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/209_plastique_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/389_plastique_M.png
+
+newmtl MAT_180
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/407_peinture_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/387_peinture_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/235_peinture_M.png
+
+newmtl MAT_181
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/343_acier_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/381_acier_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/225_acier_M.png
+
+newmtl MAT_182
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/353_moquette_casino_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/269_moquette_casino_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/370_moquette_casino_M.png
+
+newmtl MAT_183
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/310_ens_technique_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_184
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/206_bois_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/300_bois_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/427_bois_M.png
+
+newmtl MAT_185
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/351_pin_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/214_pin_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/295_pin_M.png
+
+newmtl MAT_186
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/304_scr_tv_A.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/413_MAS_M00_S30.png
+
+newmtl MAT_187
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/335_moquette_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/320_moquette_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/397_moquette_M.png
+
+newmtl MAT_188
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/375_terrazzo_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/428_terrazzo_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/426_terrazzo_M.png
+
+newmtl MAT_189
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/360_DefaultDetail.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
+
+newmtl MAT_190
+Ka 0.2 0.2 0.2
+Kd 1.0 1.0 1.0
+Ks 0.3 0.3 0.3
+Ns 50.0
+map_Kd ../DarkRPCity_TEXTURES_PNG/395_metal_peint_A.png
+map_Bump -bm 1.0 ../DarkRPCity_TEXTURES_PNG/434_metal_peint_N.png
+# DetailMap ../DarkRPCity_TEXTURES_PNG/210_Metal_DirtyOldIndustry_Substance_detailmap_subtle.png
+map_Ks ../DarkRPCity_TEXTURES_PNG/400_metal_peint_M.png
