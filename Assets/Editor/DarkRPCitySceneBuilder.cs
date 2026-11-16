@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 public class DarkRPCitySceneBuilder : EditorWindow
 {
     [Serializable] class Manifest { public MeshFile[] fichiers_mesh; public Lod[] lod_groups; }
-    [Serializable] class MeshFile { public string filename; }
+    [Serializable] class MeshFile { public string fichier; }
     [Serializable] class Lod { public int gameobject_id; public string nom; public Level[] niveaux; }
     [Serializable] class Level { public float hauteur_ecran; public Item[] objets; }
     [Serializable] class Item { public int gameobject_id; }
@@ -28,7 +28,8 @@ public class DarkRPCitySceneBuilder : EditorWindow
     void Build()
     {
         string root = Directory.GetParent(Application.dataPath).FullName;
-        string stage = Path.Combine(root, "DarkRPCity_Staging");
+        string stage = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "DarkRPCity_RECONSTRUCTION");
+        if (!Directory.Exists(stage)) stage = Path.Combine(root, "DarkRPCity_Staging");
         string json = Path.Combine(stage, "DarkRPCity_UNITY_MANIFEST.json");
         if (!File.Exists(json)) { EditorUtility.DisplayDialog("Erreur", "Archive non extraite.", "OK"); return; }
 
@@ -44,9 +45,9 @@ public class DarkRPCitySceneBuilder : EditorWindow
             int models = 0;
             foreach (var f in data.fichiers_mesh)
             {
-                string src = Path.Combine(stage,"DarkRPCity_MESHES_FUSIONNES",f.filename);
+                string src = Path.Combine(stage,"DarkRPCity_MESHES_FUSIONNES",f.fichier);
                 if (!File.Exists(src)) continue;
-                string dst = folder+"/"+f.filename;
+                string dst = folder+"/"+f.fichier;
                 if (!File.Exists(dst)) File.Copy(src,dst);
                 AssetDatabase.ImportAsset(dst,ImportAssetOptions.ForceSynchronousImport);
                 var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(dst);
