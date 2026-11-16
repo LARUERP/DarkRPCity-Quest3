@@ -1,0 +1,84 @@
+name: Inspect DarkRPCity relations
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/inspect-city-relations.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Download reconstruction
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 \
+            "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" \
+            -o source.zip
+
+      - name: Inspect object relationships
+        run: |
+          python3 - <<'PY'
+          import zipfile,json,collections,os
+          z=zipfile.ZipFile("source.zip")
+          report={"archive_bytes":os.path.getsize("source.zip"),"json":{},"mesh":{}}
+          def summarize(x):
+              if isinstance(x,dict):
+                  out={"type":"dict","keys":list(x.keys())}
+                  for k,v in x.items():
+                      if isinstance(v,list):
+                          out[k+"_count"]=len(v)
+                          if v: out[k+"_sample"]=v[:3]
+                  return out
+              if isinstance(x,list):
+                  return {"type":"list","count":len(x),"sample":x[:5]}
+              return {"type":type(x).__name__,"value":str(x)[:500]}
+          for f in z.infolist():
+              if f.is_dir(): continue
+              n=f.filename
+              if n.lower().endswith(".json"):
+                  try:
+                      data=json.loads(z.read(n))
+                      report["json"][n]=summarize(data)
+                      if n=="DarkRPCity_UNITY_MANIFEST.json":
+                          objs=data.get("objets",[])
+                          hier=data.get("hierarchie",[])
+                          report["object_analysis"]={
+                            "objects":len(objs),
+                            "hierarchy":len(hier),
+                            "mesh_id_counts":dict(collections.Counter(str(o.get("mesh_id")) for o in objs)),
+                            "parent_ids_missing_from_hierarchy":len({
+                              o.get("parent_id") for o in objs
+                              if o.get("parent_id") is not None
+                              and o.get("parent_id") not in {h.get("id") for h in hier}
+                            }),
+                            "object_samples":objs[:12],
+                            "hierarchy_samples":hier[:12]
+                          }
+                  except Exception as e:
+                      report["json"][n]={"ERROR":str(e)}
+              if n.lower().endswith(".obj"):
+                  report["mesh"][n]=f.file_size
+          report["mesh_summary"]={
+            "count":len(report["mesh"]),
+            "total_bytes":sum(report["mesh"].values()),
+            "largest":sorted(
+              [{"path":k,"bytes":v} for k,v in report["mesh"].items()],
+              key=lambda x:x["bytes"],reverse=True
+            )[:30]
+          }
+          with open("DARKRPCITY_RELATIONS_REPORT.json","w") as f:
+              json.dump(report,f,ensure_ascii=False,indent=2)
+          print(json.dumps(report,ensure_ascii=False,indent=2)[:45000])
+          PY
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: DarkRPCity-relations-report
+          path: DARKRPCITY_RELATIONS_REPORT.json
+          retention-days: 14
