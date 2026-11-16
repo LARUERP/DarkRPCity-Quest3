@@ -1,0 +1,101 @@
+name: Inspect DarkRPCity mesh mapping
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/inspect-city-mapping.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  mapping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Download source
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 \
+            "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" \
+            -o source.zip
+
+      - name: Diagnose exact mesh associations
+        run: |
+          python3 - <<'PY'
+          import zipfile,json,re,collections,os
+          z=zipfile.ZipFile("source.zip")
+          names=z.namelist()
+          report={"files":{},"matching":{}}
+
+          targets=[
+            "DarkRPCity_UNITY_MANIFEST.json",
+            "DarkRPCity_STRUCTURE_RECONSTRUITE.json",
+            "DarkRPCity_ASSOCIATIONS.json",
+            "DarkRPCity_LOD_ASSOCIATIONS.json",
+            "DarkRPCity_CORRESPONDANCES_EXACTES.json",
+            "DarkRPCity_GROS_MODELES_REFERENCES.json",
+            "DarkRPCity_MATERIAUX_TEXTURES.json"
+          ]
+
+          def summarize(x):
+            if isinstance(x,dict):
+              return {"type":"dict","keys":list(x.keys()),
+                      "samples":{k:v[:4] for k,v in x.items() if isinstance(v,list)}}
+            if isinstance(x,list):
+              return {"type":"list","count":len(x),"samples":x[:8]}
+            return {"type":type(x).__name__,"value":str(x)[:1000]}
+
+          loaded={}
+          for base in targets:
+            matches=[n for n in names if n.split("/")[-1]==base]
+            if not matches:
+              report["files"][base]={"missing":True}
+              continue
+            path=max(matches,key=lambda n:z.getinfo(n).file_size)
+            try:
+              data=json.loads(z.read(path))
+              loaded[base]=data
+              report["files"][base]={"path":path,"bytes":z.getinfo(path).file_size,
+                                     "summary":summarize(data)}
+            except Exception as e:
+              report["files"][base]={"error":str(e)}
+
+          manifest=loaded.get("DarkRPCity_UNITY_MANIFEST.json",{})
+          objects=manifest.get("objets",[])
+          object_ids={o.get("gameobject_id") for o in objects}
+          object_ids.discard(None)
+
+          obj_files=[]
+          for n in names:
+            if n.lower().endswith(".obj"):
+              m=re.search(r"GO_(\d+)_",n)
+              obj_files.append({
+                "path":n,
+                "bytes":z.getinfo(n).file_size,
+                "id":int(m.group(1)) if m else None
+              })
+
+          file_ids={x["id"] for x in obj_files if x["id"] is not None}
+          report["matching"]={
+            "manifest_objects":len(objects),
+            "unique_object_ids":len(object_ids),
+            "obj_files":len(obj_files),
+            "obj_files_with_GO_id":sum(x["id"] is not None for x in obj_files),
+            "matching_GO_ids":len(object_ids & file_ids),
+            "matching_samples":sorted(object_ids & file_ids)[:50],
+            "unmatched_obj_samples":[x for x in obj_files if x["id"] is None][:20],
+            "obj_samples":obj_files[:25]
+          }
+
+          with open("DARKRPCITY_MAPPING_DIAGNOSTIC.json","w") as f:
+            json.dump(report,f,ensure_ascii=False,indent=2)
+          print(json.dumps(report,ensure_ascii=False,indent=2)[:40000])
+          PY
+
+      - name: Upload mapping diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: DarkRPCity-mapping-diagnostic
+          path: DARKRPCITY_MAPPING_DIAGNOSTIC.json
+          retention-days: 14
