@@ -1,0 +1,109 @@
+name: Deep inspect DarkRPCity
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/deep-inspect-city.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Download source archive
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 \
+            "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" \
+            -o source.zip
+          sha256sum source.zip
+
+      - name: Analyze all reconstruction files
+        run: |
+          python3 - <<'PY'
+          import json, zipfile, os, collections
+          from pathlib import PurePosixPath
+
+          z = zipfile.ZipFile("source.zip")
+          files = [x for x in z.infolist() if not x.is_dir()]
+          names = [x.filename for x in files]
+
+          report = {
+            "archive_bytes": os.path.getsize("source.zip"),
+            "total_files": len(files),
+            "top_level": sorted(set(n.split("/")[0] for n in names)),
+            "json_files": [n for n in names if n.lower().endswith(".json")],
+            "obj_files": [],
+            "warnings": []
+          }
+
+          folders = collections.defaultdict(list)
+          for f in files:
+            if f.filename.lower().endswith(".obj"):
+              folders[str(PurePosixPath(f.filename).parent)].append(f)
+              report["obj_files"].append({
+                "path": f.filename,
+                "bytes": f.file_size
+              })
+
+          report["obj_folders"] = {
+            k: {
+              "count": len(v),
+              "total_bytes": sum(x.file_size for x in v),
+              "largest": [
+                {"path": x.filename, "bytes": x.file_size}
+                for x in sorted(v, key=lambda a:a.file_size, reverse=True)[:5]
+              ]
+            } for k,v in folders.items()
+          }
+
+          for base in [
+            "DarkRPCity_UNITY_MANIFEST.json",
+            "DarkRPCity_STRUCTURE_RECONSTRUITE.json",
+            "DarkRPCity_SCENE_BUILD_PLAN.json"
+          ]:
+            matches = [
+              f for f in files
+              if PurePosixPath(f.filename).name == base
+            ]
+            if not matches:
+              report["warnings"].append("Absent: " + base)
+              continue
+
+            f = max(matches, key=lambda x:x.file_size)
+            data = json.loads(z.read(f))
+            item = {"path": f.filename, "type": type(data).__name__}
+
+            if isinstance(data, dict):
+              item["keys"] = list(data.keys())
+              for key in [
+                "fichiers_mesh", "objets",
+                "lod_groups", "materiaux", "hierarchie"
+              ]:
+                value = data.get(key)
+                if isinstance(value, list):
+                  item[key + "_count"] = len(value)
+                  item[key + "_sample"] = value[:3]
+
+            elif isinstance(data, list):
+              item["count"] = len(data)
+              item["sample"] = data[:5]
+
+            report[base] = item
+
+          with open("DARKRPCITY_DEEP_REPORT.json", "w") as f:
+            json.dump(report, f, ensure_ascii=False, indent=2)
+
+          print(json.dumps(report, ensure_ascii=False, indent=2)[:40000])
+          PY
+
+      - name: Upload analysis report
+        uses: actions/upload-artifact@v4
+        with:
+          name: DarkRPCity-deep-inspection
+          path: DARKRPCITY_DEEP_REPORT.json
+          retention-days: 14
