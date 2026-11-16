@@ -13,10 +13,20 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 360
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Restore Unity import cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            Library
+            Assets/DarkRPCity_Source
+          key: ${{ runner.os }}-unity-2021.3.16f1-darkrpcity-source-v0.1-ressources-${{ hashFiles('Assets/Editor/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            ${{ runner.os }}-unity-2021.3.16f1-darkrpcity-source-v0.1-ressources-
 
       - name: Download and prepare city source
         run: |
