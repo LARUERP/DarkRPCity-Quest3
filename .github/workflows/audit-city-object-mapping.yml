@@ -1,0 +1,84 @@
+name: Full audit DarkRPCity object mapping
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/audit-city-object-mapping.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Download reconstruction archive
+        run: |
+          set -euo pipefail
+          curl -fL --retry 4 "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" -o source.zip
+
+      - name: Audit all object ranges
+        run: |
+          python3 - <<'PY'
+          import zipfile,json,re,collections
+          z=zipfile.ZipFile("source.zip")
+          names=z.namelist()
+          def find(base):
+              xs=[n for n in names if n.rsplit("/",1)[-1]==base]
+              if not xs: raise SystemExit("Absent: "+base)
+              return xs[0]
+          m=json.loads(z.read(find("DarkRPCity_UNITY_MANIFEST.json")))
+          meshes={x["mesh_id"]:x["fichier"] for x in m["fichiers_mesh"]}
+          by=collections.defaultdict(list)
+          for o in m["objets"]: by[o.get("mesh_id")].append(o)
+          report={"total_objects":len(m["objets"]),"meshes":{}}
+          exact_total=bad_total=invalid_total=0
+          for mid,filename in sorted(meshes.items()):
+              objects=by.get(mid,[])
+              if not objects: continue
+              path=find(filename)
+              groups=[]
+              with z.open(path) as f:
+                  for raw in f:
+                      if raw.startswith((b"o ",b"g ")):
+                          groups.append(raw.decode("utf-8","replace").strip()[2:])
+              exact=bad=invalid=0
+              samples=[]
+              for o in objects:
+                  r=o.get("plage_mesh") or {}
+                  start,count=r.get("debut"),r.get("nombre")
+                  gid=o.get("gameobject_id")
+                  if not isinstance(start,int) or not isinstance(count,int) or start<0 or count<1 or start+count>len(groups):
+                      invalid+=1
+                      if len(samples)<20:
+                          samples.append({"id":gid,"name":o.get("nom"),"status":"INVALID_RANGE","start":start,"count":count})
+                      continue
+                  selected=groups[start:start+count]
+                  pattern=re.compile(r"(?:^|[^0-9])GO_"+re.escape(str(gid))+r"(?:_|$)")
+                  hits=sum(bool(pattern.search(g)) for g in selected)
+                  if hits==len(selected):
+                      exact+=1
+                  else:
+                      bad+=1
+                      if len(samples)<20:
+                          samples.append({"id":gid,"name":o.get("nom"),"status":"ID_MISMATCH","groups":selected[:8],"matching":hits,"count":len(selected)})
+              report["meshes"][str(mid)]={"file":filename,"groups":len(groups),"objects":len(objects),"exact":exact,"mismatched":bad,"invalid":invalid,"samples":samples}
+              exact_total+=exact
+              bad_total+=bad
+              invalid_total+=invalid
+              print(f"Mesh {mid}: {exact}/{len(objects)} exact, {bad} mismatches, {invalid} invalid")
+          report["totals"]={"objects":len(m["objets"]),"exact":exact_total,"mismatched":bad_total,"invalid":invalid_total}
+          with open("DARKRPCITY_FULL_MAPPING_AUDIT.json","w") as f:
+              json.dump(report,f,ensure_ascii=False,indent=2)
+          print(json.dumps(report["totals"],ensure_ascii=False))
+          if invalid_total:
+              raise SystemExit("Invalid ranges detected")
+          PY
+
+      - name: Upload audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: DarkRPCity-full-mapping-audit
+          path: DARKRPCITY_FULL_MAPPING_AUDIT.json
+          retention-days: 14
