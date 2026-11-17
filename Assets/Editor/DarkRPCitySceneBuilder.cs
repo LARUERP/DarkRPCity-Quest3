@@ -150,7 +150,6 @@ public class DarkRPCitySceneBuilder
             ModelImporter importer = AssetImporter.GetAtPath(assetPath) as ModelImporter;
             if (importer != null)
             {
-                importer.importMaterials = true;
                 importer.materialImportMode = ModelImporterMaterialImportMode.ImportStandard;
                 importer.SaveAndReimport();
             }
