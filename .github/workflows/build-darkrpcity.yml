@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "Assets/Editor/DarkRPCitySceneBuilder.cs"
+      - "Assets/Editor/**"
       - ".github/workflows/build-darkrpcity.yml"
 
 permissions:
@@ -18,61 +18,73 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Restore Unity import cache
+      - name: Restore Unity cache
         uses: actions/cache@v4
         with:
-          path: |
-            Library
-            Assets/DarkRPCity_Source
-          key: ${{ runner.os }}-unity-2021.3.16f1-darkrpcity-source-v0.1-ressources-${{ hashFiles('Assets/Editor/**', 'Packages/**', 'ProjectSettings/**') }}
+          path: Library
+          key: ${{ runner.os }}-darkrpcity-${{ hashFiles('Assets/Editor/**', 'Packages/**') }}
           restore-keys: |
-            ${{ runner.os }}-unity-2021.3.16f1-darkrpcity-source-v0.1-ressources-
+            ${{ runner.os }}-darkrpcity-
 
-      - name: Download and prepare city source
+      - name: Download and prepare original DarkRPCity
+        shell: bash
         run: |
           set -euo pipefail
-          curl -fL --retry 4 \
-            "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" \
-            -o source.zip
-          mkdir -p DarkRPCity_Staging
-          python3 - <<'PY'
-          import zipfile,json,os,shutil
-          z=zipfile.ZipFile("source.zip")
-          names=z.namelist()
-          def find(base):
-              a=[n for n in names if n.rsplit("/",1)[-1]==base]
-              if not a: raise SystemExit("Absent: "+base)
-              return a[0]
-          manifest=json.loads(z.read(find("DarkRPCity_UNITY_MANIFEST.json")))
-          meshids=sorted(set(o["mesh_id"] for o in manifest["objets"]))
-          meshfiles=[x for x in manifest["fichiers_mesh"] if x["mesh_id"] in meshids]
-          out={"fichiers_mesh":meshfiles,"objets":[]}
-          for o in manifest["objets"]:
-              matrix=o.get("matrice_monde")
-              if not matrix or len(matrix)!=4:
-                  continue
-              out["objets"].append({
-                  "gameobject_id":o["gameobject_id"],
-                  "nom":o.get("nom","Objet"),
-                  "mesh_id":o["mesh_id"],
-                  "matrix":[float(v) for row in matrix for v in row]
-              })
-          with open("DarkRPCity_Staging/DarkRPCity_RUNTIME_MANIFEST.json","w") as f:
-              json.dump(out,f,ensure_ascii=False,separators=(",",":"))
-          wanted={x["fichier"] for x in meshfiles}
-          for n in names:
-              base=n.rsplit("/",1)[-1]
-              ext=os.path.splitext(base)[1].lower()
-              if base in wanted or ext in (".mtl",".png",".jpg",".jpeg"):
-                  target=os.path.join("DarkRPCity_Staging",base)
-                  if not os.path.exists(target):
-                      with z.open(n) as src,open(target,"wb") as dst:
-                          shutil.copyfileobj(src,dst,1024*1024)
-          print("OBJ requis:",len(wanted))
-          print("Objets manifest:",len(out["objets"]))
-          PY
+          curl -fL --retry 4 "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" -o source.zip
+          python3 - <<'PYTHON'
+          import zipfile, json, os, shutil
+          from pathlib import PurePosixPath
 
-      - name: Build Unity Android scene and AssetBundle
+          with zipfile.ZipFile("source.zip") as z:
+              names = z.namelist()
+              def find(name):
+                  matches = [n for n in names if PurePosixPath(n).name == name]
+                  if not matches:
+                      raise RuntimeError("Absent de l'archive : " + name)
+                  return matches[0]
+
+              manifest = json.loads(z.read(find("DarkRPCity_UNITY_MANIFEST.json")))
+              if not manifest.get("objets") or not manifest.get("fichiers_mesh"):
+                  raise RuntimeError("Manifeste incomplet")
+
+              os.makedirs("DarkRPCity_Staging", exist_ok=True)
+              runtime = dict(manifest)
+              runtime["objets"] = []
+              for obj in manifest["objets"]:
+                  item = dict(obj)
+                  matrix = obj.get("matrice_monde")
+                  if matrix and len(matrix) == 4:
+                      item["matrix"] = [float(v) for row in matrix for v in row]
+                  runtime["objets"].append(item)
+
+              with open("DarkRPCity_Staging/DarkRPCity_RUNTIME_MANIFEST.json", "w", encoding="utf-8") as f:
+                  json.dump(runtime, f, ensure_ascii=False)
+
+              mesh_ids = {o.get("mesh_id") for o in manifest["objets"]}
+              wanted = {m["fichier"] for m in manifest["fichiers_mesh"] if m.get("mesh_id") in mesh_ids}
+              copied = 0
+
+              for name in names:
+                  if name.endswith("/"):
+                      continue
+                  base = PurePosixPath(name).name
+                  ext = PurePosixPath(base).suffix.lower()
+                  if base not in wanted and ext not in (".mtl", ".png", ".jpg", ".jpeg", ".tga"):
+                      continue
+                  target = os.path.join("DarkRPCity_Staging", *PurePosixPath(name).parts)
+                  os.makedirs(os.path.dirname(target), exist_ok=True)
+                  if not os.path.exists(target):
+                      with z.open(name) as src, open(target, "wb") as dst:
+                          shutil.copyfileobj(src, dst, 1024 * 1024)
+                      copied += 1
+
+              print("Objets :", len(manifest["objets"]))
+              print("Matériaux :", len(manifest.get("materiaux", [])))
+              print("OBJ nécessaires :", len(wanted))
+              print("Ressources copiées :", copied)
+          PYTHON
+
+      - name: Build Android
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -85,7 +97,7 @@ jobs:
           buildMethod: DarkRPCitySceneBuilder.BuildFromCI
           allowDirtyBuild: true
 
-      - name: Upload generated city
+      - name: Upload build and reports
         uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -94,4 +106,5 @@ jobs:
             Assets/DarkRPCity_Generated/
             Assets/DarkRPCity_Build/
             Assets/DarkRPCity_Source/
+            DarkRPCity_Staging/
           retention-days: 14
