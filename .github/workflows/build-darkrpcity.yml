@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "Assets/Editor/**"
+      - "Assets/Editor/DarkRPCitySceneBuilder.cs"
       - ".github/workflows/build-darkrpcity.yml"
 
 permissions:
@@ -22,69 +22,150 @@ jobs:
         uses: actions/cache@v4
         with:
           path: Library
-          key: ${{ runner.os }}-darkrpcity-${{ hashFiles('Assets/Editor/**', 'Packages/**') }}
+          key: ${{ runner.os }}-darkrpcity-v2-${{ hashFiles('Assets/Editor/**', 'Packages/**') }}
           restore-keys: |
-            ${{ runner.os }}-darkrpcity-
+            ${{ runner.os }}-darkrpcity-v2-
 
-      - name: Download and prepare original DarkRPCity
+      - name: Download and validate original DarkRPCity source
         shell: bash
         run: |
           set -euo pipefail
           curl -fL --retry 4 "https://github.com/LARUERP/DarkRPCity-Quest3/releases/download/v0.1-ressources/DarkRPCity_RECONSTRUCTION.zip" -o source.zip
-          python3 - <<'PYTHON'
-          import zipfile, json, os, shutil
+          python3 - <<'PY'
+          import os, json, zipfile, shutil, posixpath
           from pathlib import PurePosixPath
 
-          with zipfile.ZipFile("source.zip") as z:
-              names = z.namelist()
-              def find(name):
-                  matches = [n for n in names if PurePosixPath(n).name == name]
-                  if not matches:
-                      raise RuntimeError("Absent de l'archive : " + name)
-                  return matches[0]
+          archive = "source.zip"
+          stage = "DarkRPCity_Staging"
+          assets = "Assets/DarkRPCity_Source"
+          shutil.rmtree(stage, ignore_errors=True)
+          shutil.rmtree(assets, ignore_errors=True)
+          os.makedirs(stage, exist_ok=True)
+          os.makedirs(assets, exist_ok=True)
 
-              manifest = json.loads(z.read(find("DarkRPCity_UNITY_MANIFEST.json")))
-              if not manifest.get("objets") or not manifest.get("fichiers_mesh"):
-                  raise RuntimeError("Manifeste incomplet")
+          with zipfile.ZipFile(archive) as z:
+              names = [n for n in z.namelist() if not n.endswith("/")]
+              manifests = [n for n in names if PurePosixPath(n).name == "DarkRPCity_UNITY_MANIFEST.json"]
+              if len(manifests) != 1:
+                  raise SystemExit("Manifeste absent ou présent plusieurs fois.")
+              manifest_path = manifests[0]
+              manifest = json.loads(z.read(manifest_path))
 
-              os.makedirs("DarkRPCity_Staging", exist_ok=True)
+              meshes = manifest.get("fichiers_mesh", [])
+              objects = manifest.get("objets", [])
+              if len(meshes) != 30 or len(objects) != 4193:
+                  raise SystemExit(f"Source inattendue : {len(meshes)} meshes / {len(objects)} objets.")
+
+              path_by_mesh = {}
+              group_counts = []
+              group_names_by_id = {}
+              for mf in meshes:
+                  mid = int(mf["mesh_id"])
+                  base = PurePosixPath(mf["fichier"]).name
+                  matches = [n for n in names if PurePosixPath(n).name == base]
+                  if len(matches) != 1:
+                      raise SystemExit(f"OBJ absent ou ambigu : {base}")
+                  path_by_mesh[mid] = matches[0]
+
+                  g_names, o_names = [], []
+                  with z.open(matches[0]) as stream:
+                      for raw in stream:
+                          line = raw.decode("utf-8", "ignore").strip()
+                          if line.startswith("g "):
+                              g_names.append(line.split(maxsplit=1)[1].strip())
+                          elif line.startswith("o "):
+                              o_names.append(line.split(maxsplit=1)[1].strip())
+                  groups = g_names if g_names else o_names
+                  group_names_by_id[mid] = groups
+                  group_counts.append({"mesh_id": mid, "count": len(groups)})
+
+              needed_ids = sorted({int(o["mesh_id"]) for o in objects})
+              if needed_ids != [2, 7, 27]:
+                  raise SystemExit("Les IDs de meshes principaux ne correspondent pas à la source auditée : " + str(needed_ids))
+
+              checked_ranges = 0
+              for obj in objects:
+                  mid = int(obj["mesh_id"])
+                  r = obj.get("plage_mesh") or {}
+                  start, count = int(r.get("debut", -1)), int(r.get("nombre", 0))
+                  groups = group_names_by_id[mid]
+                  if start < 0 or count <= 0 or start + count > len(groups):
+                      raise SystemExit(f"Plage OBJ invalide pour GO_{obj['gameobject_id']} mesh {mid}")
+                  prefix = f"GO_{obj['gameobject_id']}_"
+                  bad = [g for g in groups[start:start+count] if not g.startswith(prefix)]
+                  if bad:
+                      raise SystemExit(f"Correspondance OBJ incorrecte pour GO_{obj['gameobject_id']} : {bad[:2]}")
+                  checked_ranges += count
+
               runtime = dict(manifest)
-              runtime["objets"] = []
-              for obj in manifest["objets"]:
-                  item = dict(obj)
+              runtime["group_counts"] = group_counts
+              for mf in runtime["fichiers_mesh"]:
+                  mid = int(mf["mesh_id"])
+                  mf["asset_path"] = path_by_mesh[mid]
+              for obj in runtime["objets"]:
                   matrix = obj.get("matrice_monde")
-                  if matrix and len(matrix) == 4:
-                      item["matrix"] = [float(v) for row in matrix for v in row]
-                  runtime["objets"].append(item)
+                  if matrix and len(matrix) == 4 and isinstance(matrix[0], list):
+                      obj["matrix"] = [float(v) for row in matrix for v in row]
+                  elif matrix and len(matrix) == 16:
+                      obj["matrix"] = [float(v) for v in matrix]
+                  else:
+                      raise SystemExit(f"Matrice monde invalide pour GO_{obj['gameobject_id']}")
 
-              with open("DarkRPCity_Staging/DarkRPCity_RUNTIME_MANIFEST.json", "w", encoding="utf-8") as f:
-                  json.dump(runtime, f, ensure_ascii=False)
+              with open(os.path.join(stage, "DarkRPCity_RUNTIME_MANIFEST.json"), "w", encoding="utf-8") as f:
+                  json.dump(runtime, f, ensure_ascii=False, separators=(",", ":"))
 
-              mesh_ids = {o.get("mesh_id") for o in manifest["objets"]}
-              wanted = {m["fichier"] for m in manifest["fichiers_mesh"] if m.get("mesh_id") in mesh_ids}
-              copied = 0
-
+              wanted_obj_paths = {path_by_mesh[mid] for mid in needed_ids}
+              image_exts = {".png", ".jpg", ".jpeg", ".tga"}
+              copied_textures = 0
+              copied_mtls = 0
+              copied_objs = 0
               for name in names:
-                  if name.endswith("/"):
+                  ext = PurePosixPath(name).suffix.lower()
+                  if name not in wanted_obj_paths and ext != ".mtl" and ext not in image_exts:
                       continue
-                  base = PurePosixPath(name).name
-                  ext = PurePosixPath(base).suffix.lower()
-                  if base not in wanted and ext not in (".mtl", ".png", ".jpg", ".jpeg", ".tga"):
-                      continue
-                  target = os.path.join("DarkRPCity_Staging", *PurePosixPath(name).parts)
+                  target = os.path.join(assets, *PurePosixPath(name).parts)
                   os.makedirs(os.path.dirname(target), exist_ok=True)
-                  if not os.path.exists(target):
-                      with z.open(name) as src, open(target, "wb") as dst:
-                          shutil.copyfileobj(src, dst, 1024 * 1024)
-                      copied += 1
+                  with z.open(name) as src, open(target, "wb") as dst:
+                      shutil.copyfileobj(src, dst, 1024 * 1024)
+                  if name in wanted_obj_paths: copied_objs += 1
+                  elif ext == ".mtl": copied_mtls += 1
+                  else: copied_textures += 1
 
-              print("Objets :", len(manifest["objets"]))
-              print("Matériaux :", len(manifest.get("materiaux", [])))
-              print("OBJ nécessaires :", len(wanted))
-              print("Ressources copiées :", copied)
-          PYTHON
+              # Vérifie que les chemins de textures du MTL restent valides après copie.
+              missing_maps = []
+              for mtl in [n for n in names if PurePosixPath(n).suffix.lower() == ".mtl"]:
+                  with z.open(mtl) as stream:
+                      for raw in stream:
+                          line = raw.decode("utf-8", "ignore").strip()
+                          low = line.lower()
+                          if low.startswith(("map_kd ", "map_bump ", "bump ", "norm ", "map_ka ")):
+                              tex = line.split()[-1].strip('"').replace("\\\\", "/")
+                              rel = posixpath.normpath(posixpath.join(posixpath.dirname(mtl), tex))
+                              if rel not in names:
+                                  missing_maps.append((mtl, rel))
+              if missing_maps:
+                  raise SystemExit("Textures référencées absentes du ZIP : " + str(missing_maps[:8]))
+              if copied_textures < 200:
+                  raise SystemExit(f"Trop peu de textures copiées : {copied_textures}")
+              if copied_objs != 3:
+                  raise SystemExit(f"Les 3 OBJ principaux ne sont pas copiés : {copied_objs}")
 
-      - name: Build Android
+              report = {
+                  "manifest_objects": len(objects),
+                  "mesh_files_verified": len(meshes),
+                  "main_mesh_ids": needed_ids,
+                  "obj_group_ranges_verified": checked_ranges,
+                  "main_obj_copied": copied_objs,
+                  "mtl_copied": copied_mtls,
+                  "textures_copied": copied_textures,
+                  "note": "Les 27 OBJ secondaires sont vérifiés dans la source ; les 3 OBJ principaux portent les 4 193 objets du manifeste."
+              }
+              with open(os.path.join(stage, "PREFLIGHT_REPORT.json"), "w", encoding="utf-8") as f:
+                  json.dump(report, f, ensure_ascii=False, indent=2)
+              print(json.dumps(report, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Build reconstructed Unity scene and Android bundle
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -97,14 +178,13 @@ jobs:
           buildMethod: DarkRPCitySceneBuilder.BuildFromCI
           allowDirtyBuild: true
 
-      - name: Upload build and reports
-        uses: actions/upload-artifact@v4
+      - name: Upload build and validation reports
         if: always()
+        uses: actions/upload-artifact@v4
         with:
-          name: DarkRPCity-Quest3-Build
+          name: DarkRPCity-Quest3-Reconstruction
           path: |
             Assets/DarkRPCity_Generated/
             Assets/DarkRPCity_Build/
-            Assets/DarkRPCity_Source/
-            DarkRPCity_Staging/
+            DarkRPCity_Staging/PREFLIGHT_REPORT.json
           retention-days: 14
