@@ -177,6 +177,18 @@ jobs:
           targetPlatform: Android
           buildMethod: DarkRPCitySceneBuilder.BuildFromCI
           allowDirtyBuild: true
+          customParameters: -logFile /github/workspace/Unity-Editor.log
+
+      - name: Collect Unity diagnostics
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p Diagnostics
+          if [ -f Unity-Editor.log ]; then
+            cp Unity-Editor.log Diagnostics/Unity-Editor.log
+          else
+            echo "Journal Unity introuvable à la racine du workspace." > Diagnostics/diagnostic-status.txt
+          fi
 
       - name: Upload build and validation reports
         if: always()
@@ -187,4 +199,5 @@ jobs:
             Assets/DarkRPCity_Generated/
             Assets/DarkRPCity_Build/
             DarkRPCity_Staging/PREFLIGHT_REPORT.json
+            Diagnostics/
           retention-days: 14
