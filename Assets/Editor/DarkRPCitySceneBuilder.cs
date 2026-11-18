@@ -106,6 +106,8 @@ public class DarkRPCitySceneBuilder
             Debug.Log("DarkRPCity mesh " + mf.mesh_id + " : groupes OBJ=" + count.count + ", objets reconstruits=" + imported);
         }
 
+        DarkRPCityTextureRepair.Repair();
+
         if (createdIds.Count != data.objets.Length)
         {
             var missing = data.objets.Select(x => x.gameobject_id).Where(id => !createdIds.Contains(id)).Take(40);
@@ -151,6 +153,8 @@ public class DarkRPCitySceneBuilder
             "Fichiers OBJ source vérifiés : 30\n" +
             "Textures source : " + textureCount + "\n" +
             "Matériaux Unity créés : " + materialCount + "\n" +
+            "Matériaux avec textures liées : " + DarkRPCityTextureRepair.LoadedTextures + "\n" +
+            "Textures manquantes : " + DarkRPCityTextureRepair.MissingTextures + "\n" +
             "Groupes LOD du manifeste : " + (File.ReadAllText(manifestPath).Contains("\"lod_groups\"") ? "présents mais pas encore reconstruits" : "non détectés") + "\n" +
             "Coordonnées : géométrie exportée conservée telle quelle (coordonnées monde)\n" +
             "Bundle Android : darkrpcity_scene\n" +
