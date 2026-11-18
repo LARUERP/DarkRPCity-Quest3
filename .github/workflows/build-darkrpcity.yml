@@ -121,7 +121,7 @@ jobs:
               copied_objs = 0
               for name in names:
                   ext = PurePosixPath(name).suffix.lower()
-                  if name not in wanted_obj_paths and ext != ".mtl" and ext not in image_exts:
+                  if name not in wanted_obj_paths and ext != ".mtl" and ext not in image_exts and PurePosixPath(name).name != "DarkRPCity_MATERIAUX_TEXTURES.json":
                       continue
                   target = os.path.join(assets, *PurePosixPath(name).parts)
                   os.makedirs(os.path.dirname(target), exist_ok=True)
