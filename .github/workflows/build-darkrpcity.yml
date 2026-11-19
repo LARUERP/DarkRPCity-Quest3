@@ -200,6 +200,7 @@ jobs:
           path: |
             Assets/DarkRPCity_Generated/
             Assets/DarkRPCity_Build/
+            BuiltPallets/
             DarkRPCity_Staging/PREFLIGHT_REPORT.json
             Diagnostics/
           retention-days: 14

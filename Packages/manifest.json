@@ -1,3 +1,17 @@
 {
-  "dependencies": {}
+  "scopedRegistries": [
+    {
+      "name": "SLZ",
+      "url": "https://registry.stresslevelzero.com",
+      "scopes": [
+        "com.stresslevelzero",
+        "com.unity.render-pipelines",
+        "com.unity.shadergraph"
+      ]
+    }
+  ],
+  "dependencies": {
+    "com.stresslevelzero.marrow.sdk": "1.2.0",
+    "com.stresslevelzero.marrow.backlot": "1.2.0"
+  }
 }

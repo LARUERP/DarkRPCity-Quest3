@@ -121,13 +121,14 @@ public class DarkRPCitySceneBuilder
         lightObject.transform.rotation = Quaternion.Euler(45f, -30f, 0f);
         RenderSettings.ambientLight = new Color(0.48f, 0.48f, 0.48f);
 
-        Type markerType = Type.GetType("SLZ.Marrow.SceneStreaming.PlayerMarker, SLZ.Marrow");
-        if (markerType != null && typeof(Component).IsAssignableFrom(markerType)) world.AddComponent(markerType);
 
+        DarkRPCityMarrowIntegration.EnsurePlayerMarker(scene);
         string scenePath = generated + "/DarkRPCity.unity";
         EditorSceneManager.SaveScene(scene, scenePath);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
+
+        DarkRPCityCreatePallet.CreateAndPack();
 
         AssetImporter sceneImporter = AssetImporter.GetAtPath(scenePath);
         if (sceneImporter == null) throw new Exception("Impossible de préparer le bundle de la scène.");
@@ -157,8 +158,8 @@ public class DarkRPCitySceneBuilder
             "Textures manquantes : " + DarkRPCityTextureRepair.MissingTextures + "\n" +
             "Groupes LOD du manifeste : " + (File.ReadAllText(manifestPath).Contains("\"lod_groups\"") ? "présents mais pas encore reconstruits" : "non détectés") + "\n" +
             "Coordonnées : géométrie exportée conservée telle quelle (coordonnées monde)\n" +
-            "Bundle Android : darkrpcity_scene\n" +
-            "IMPORTANT : ce bundle n'est pas encore un Pallet/Level Crate BONELAB installable.";
+            "AssetBundle Android de diagnostic : darkrpcity_scene\n" +
+            "Packaging Pallet BONELAB : commande Marrow SDK exécutée sans erreur.";
         File.WriteAllText(generated + "/BUILD_REPORT.txt", report);
         Debug.Log(report);
         Debug.Log("DARKRPCITY_GEOMETRY_VALIDATED");
