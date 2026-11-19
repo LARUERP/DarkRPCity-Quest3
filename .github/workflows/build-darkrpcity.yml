@@ -4,7 +4,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "Assets/Editor/DarkRPCitySceneBuilder.cs"
+      - "Assets/Editor/**"
+      - "Packages/**"
+      - "ProjectSettings/**"
       - ".github/workflows/build-darkrpcity.yml"
 
 permissions:
