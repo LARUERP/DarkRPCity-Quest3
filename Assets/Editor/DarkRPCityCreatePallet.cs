@@ -134,25 +134,60 @@ public static class DarkRPCityCreatePallet
 
         Debug.Log("DARKRPCITY : PALLET ET LEVEL CRATE CRÉÉS.");
 
-        // Définir ASTC avant la validation Marrow.
-        EditorUserBuildSettings.androidBuildSubtarget = MobileTextureSubtarget.ASTC;
-        Debug.Log("DARKRPCITY : compression Android ASTC activée.");
+        // Vérifier la cible réelle avant de configurer la compression Android.
+        Debug.LogError("DARKRPCITY ASTC DIAG : cible active = " +
+            EditorUserBuildSettings.activeBuildTarget);
 
-        // Corriger et vérifier les règles du Marrow SDK.
+        if (EditorUserBuildSettings.activeBuildTarget != BuildTarget.Android)
+            throw new Exception(
+                "La cible Unity active n'est pas Android : " +
+                EditorUserBuildSettings.activeBuildTarget);
+
+        EditorUserBuildSettings.androidBuildSubtarget = MobileTextureSubtarget.ASTC;
+
+        Debug.LogError("DARKRPCITY ASTC DIAG : sous-cible Android après réglage = " +
+            EditorUserBuildSettings.androidBuildSubtarget);
+
+        if (EditorUserBuildSettings.androidBuildSubtarget != MobileTextureSubtarget.ASTC)
+            throw new Exception(
+                "Unity n'a pas conservé le réglage ASTC pour Android.");
+
+        // Relever les règles Marrow sans masquer une éventuelle erreur.
         var issues = new List<MarrowProjectValidation.MarrowValidationRule>();
         MarrowProjectValidation.GetIssues(issues);
 
+        Debug.LogError("DARKRPCITY MARROW DIAG : nombre de règles signalées = " +
+            issues.Count);
+
+        for (int i = 0; i < issues.Count; i++)
+        {
+            var issue = issues[i];
+            Debug.LogError("DARKRPCITY MARROW DIAG [" + i + "] : " +
+                (issue == null ? "<null>" : issue.GetType().FullName + " | " + issue));
+        }
+
         if (issues.Count > 0)
         {
-            Debug.Log("Marrow SDK : correction de " +
+            Debug.Log("Marrow SDK : tentative de correction de " +
                 issues.Count + " problème(s).");
 
-            MarrowProjectValidation.FixIssues(issues);
+            try
+            {
+                MarrowProjectValidation.FixIssues(issues);
+            }
+            catch (System.Reflection.TargetParameterCountException e)
+            {
+                Debug.LogError(
+                    "DARKRPCITY : le correcteur automatique Marrow a échoué " +
+                    "(TargetParameterCountException). Nouvelle validation stricte. " + e);
+            }
         }
 
         if (!MarrowProjectValidation.ValidateProject())
             throw new Exception(
-                "Le projet ne passe pas la validation Marrow SDK.");
+                "Le projet ne passe pas la validation Marrow SDK après contrôle ASTC.");
+
+        Debug.Log("DARKRPCITY : validation Marrow réussie.");
 
         // Sauvegarder les réglages Addressables existants avant le packer.
         var backup = new AddressablesBackup();
