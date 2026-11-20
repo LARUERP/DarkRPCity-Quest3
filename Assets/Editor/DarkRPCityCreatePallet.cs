@@ -134,6 +134,10 @@ public static class DarkRPCityCreatePallet
 
         Debug.Log("DARKRPCITY : PALLET ET LEVEL CRATE CRÉÉS.");
 
+        // Définir ASTC avant la validation Marrow.
+        EditorUserBuildSettings.androidBuildSubtarget = MobileTextureSubtarget.ASTC;
+        Debug.Log("DARKRPCITY : compression Android ASTC activée.");
+
         // Corriger et vérifier les règles du Marrow SDK.
         var issues = new List<MarrowProjectValidation.MarrowValidationRule>();
         MarrowProjectValidation.GetIssues(issues);
