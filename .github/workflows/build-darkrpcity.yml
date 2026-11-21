@@ -116,7 +116,7 @@ jobs:
               with open(os.path.join(stage, "DarkRPCity_RUNTIME_MANIFEST.json"), "w", encoding="utf-8") as f:
                   json.dump(runtime, f, ensure_ascii=False, separators=(",", ":"))
 
-              wanted_obj_paths = {path_by_mesh[mid] for mid in needed_ids}
+              wanted_obj_paths = set(path_by_mesh.values())
               image_exts = {".png", ".jpg", ".jpeg", ".tga"}
               copied_textures = 0
               copied_mtls = 0
@@ -149,18 +149,18 @@ jobs:
                   raise SystemExit("Textures référencées absentes du ZIP : " + str(missing_maps[:8]))
               if copied_textures < 200:
                   raise SystemExit(f"Trop peu de textures copiées : {copied_textures}")
-              if copied_objs != 3:
-                  raise SystemExit(f"Les 3 OBJ principaux ne sont pas copiés : {copied_objs}")
+              if copied_objs != 30:
+                  raise SystemExit(f"Les 30 fichiers OBJ ne sont pas copiés : {copied_objs}")
 
               report = {
                   "manifest_objects": len(objects),
                   "mesh_files_verified": len(meshes),
                   "main_mesh_ids": needed_ids,
                   "obj_group_ranges_verified": checked_ranges,
-                  "main_obj_copied": copied_objs,
+                  "obj_files_copied": copied_objs,
                   "mtl_copied": copied_mtls,
                   "textures_copied": copied_textures,
-                  "note": "Les 27 OBJ secondaires sont vérifiés dans la source ; les 3 OBJ principaux portent les 4 193 objets du manifeste."
+                  "note": "Les 30 fichiers OBJ sont copiés pour reconstruire les objets principaux et les renderers LOD."
               }
               with open(os.path.join(stage, "PREFLIGHT_REPORT.json"), "w", encoding="utf-8") as f:
                   json.dump(report, f, ensure_ascii=False, indent=2)
